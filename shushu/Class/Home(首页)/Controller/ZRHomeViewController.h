@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ZRHomeViewController.h
 //  shushu
 //
 //  Created by Apple on 16/6/24.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface ZRHomeViewController : UITableViewController
 
 @end
-

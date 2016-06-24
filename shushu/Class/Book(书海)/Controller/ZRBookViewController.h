@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZRBookViewController.h
 //  shushu
 //
 //  Created by Apple on 16/6/24.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZRBookViewController : UITableViewController
 
 @end
-

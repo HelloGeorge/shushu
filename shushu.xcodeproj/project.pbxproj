@@ -7,25 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18D612C41D1D1BF0008E94D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612C31D1D1BF0008E94D0 /* main.m */; };
-		18D612C71D1D1BF0008E94D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612C61D1D1BF0008E94D0 /* AppDelegate.m */; };
-		18D612CA1D1D1BF0008E94D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612C91D1D1BF0008E94D0 /* ViewController.m */; };
-		18D612CD1D1D1BF0008E94D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CB1D1D1BF0008E94D0 /* Main.storyboard */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
 		18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */; };
+		18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612E41D1D1EBD008E94D0 /* AppDelegate.m */; };
+		18D612E91D1D1EBD008E94D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612E51D1D1EBD008E94D0 /* main.m */; };
+		18D613071D1D217D008E94D0 /* ZRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613061D1D217D008E94D0 /* ZRHomeViewController.m */; };
+		18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613121D1D2246008E94D0 /* ZRBookViewController.m */; };
+		18D613191D1D4CD2008E94D0 /* ZRMainNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613181D1D4CD2008E94D0 /* ZRMainNavigation.m */; };
+		18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6131E1D1D4F75008E94D0 /* UIView+ZRExtension.m */; };
+		18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613211D1D54B8008E94D0 /* ZRTabbarController.m */; };
+		18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613241D1D5F0F008E94D0 /* ZRBuyViewController.m */; };
+		18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */; };
+		18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18D612BF1D1D1BF0008E94D0 /* shushu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shushu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		18D612C31D1D1BF0008E94D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		18D612C51D1D1BF0008E94D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		18D612C61D1D1BF0008E94D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18D612C81D1D1BF0008E94D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18D612C91D1D1BF0008E94D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		18D612CC1D1D1BF0008E94D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D612D11D1D1BF0008E94D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D612D31D1D1BF0008E94D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D612E31D1D1EBD008E94D0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18D612E41D1D1EBD008E94D0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18D612E51D1D1EBD008E94D0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18D613051D1D217D008E94D0 /* ZRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRHomeViewController.h; sourceTree = "<group>"; };
+		18D613061D1D217D008E94D0 /* ZRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRHomeViewController.m; sourceTree = "<group>"; };
+		18D613111D1D2246008E94D0 /* ZRBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBookViewController.h; sourceTree = "<group>"; };
+		18D613121D1D2246008E94D0 /* ZRBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBookViewController.m; sourceTree = "<group>"; };
+		18D613171D1D4CD2008E94D0 /* ZRMainNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMainNavigation.h; sourceTree = "<group>"; };
+		18D613181D1D4CD2008E94D0 /* ZRMainNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMainNavigation.m; sourceTree = "<group>"; };
+		18D6131D1D1D4F75008E94D0 /* UIView+ZRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZRExtension.h"; sourceTree = "<group>"; };
+		18D6131E1D1D4F75008E94D0 /* UIView+ZRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZRExtension.m"; sourceTree = "<group>"; };
+		18D613201D1D54B8008E94D0 /* ZRTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTabbarController.h; sourceTree = "<group>"; };
+		18D613211D1D54B8008E94D0 /* ZRTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTabbarController.m; sourceTree = "<group>"; };
+		18D613231D1D5F0F008E94D0 /* ZRBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyViewController.h; sourceTree = "<group>"; };
+		18D613241D1D5F0F008E94D0 /* ZRBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyViewController.m; sourceTree = "<group>"; };
+		18D613261D1D5F3A008E94D0 /* ZRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRProfileViewController.h; sourceTree = "<group>"; };
+		18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRProfileViewController.m; sourceTree = "<group>"; };
+		18D613291D1D634C008E94D0 /* ZRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSearchBar.h; sourceTree = "<group>"; };
+		18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +77,9 @@
 		18D612C11D1D1BF0008E94D0 /* shushu */ = {
 			isa = PBXGroup;
 			children = (
-				18D612C51D1D1BF0008E94D0 /* AppDelegate.h */,
-				18D612C61D1D1BF0008E94D0 /* AppDelegate.m */,
-				18D612C81D1D1BF0008E94D0 /* ViewController.h */,
-				18D612C91D1D1BF0008E94D0 /* ViewController.m */,
-				18D612CB1D1D1BF0008E94D0 /* Main.storyboard */,
+				18D612D91D1D1EBD008E94D0 /* Class */,
 				18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */,
 				18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */,
-				18D612D31D1D1BF0008E94D0 /* Info.plist */,
 				18D612C21D1D1BF0008E94D0 /* Supporting Files */,
 			);
 			path = shushu;
@@ -74,9 +88,219 @@
 		18D612C21D1D1BF0008E94D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18D612C31D1D1BF0008E94D0 /* main.m */,
+				18D612D31D1D1BF0008E94D0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18D612D91D1D1EBD008E94D0 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				18D612FE1D1D20AB008E94D0 /* Profile(我) */,
+				18D612FA1D1D20A0008E94D0 /* Home(首页) */,
+				18D612F61D1D2094008E94D0 /* Buy(购物车) */,
+				18D612EA1D1D203E008E94D0 /* Book(书海) */,
+				18D612DD1D1D1EBD008E94D0 /* Main */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		18D612DD1D1D1EBD008E94D0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18D612DE1D1D1EBD008E94D0 /* Category */,
+				18D612DF1D1D1EBD008E94D0 /* Controller */,
+				18D612E01D1D1EBD008E94D0 /* Lib */,
+				18D612E11D1D1EBD008E94D0 /* Model */,
+				18D612E21D1D1EBD008E94D0 /* Other */,
+				18D612E61D1D1EBD008E94D0 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		18D612DE1D1D1EBD008E94D0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18D6131D1D1D4F75008E94D0 /* UIView+ZRExtension.h */,
+				18D6131E1D1D4F75008E94D0 /* UIView+ZRExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		18D612DF1D1D1EBD008E94D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D613171D1D4CD2008E94D0 /* ZRMainNavigation.h */,
+				18D613181D1D4CD2008E94D0 /* ZRMainNavigation.m */,
+				18D613201D1D54B8008E94D0 /* ZRTabbarController.h */,
+				18D613211D1D54B8008E94D0 /* ZRTabbarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D612E01D1D1EBD008E94D0 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		18D612E11D1D1EBD008E94D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D612E21D1D1EBD008E94D0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				18D612E31D1D1EBD008E94D0 /* AppDelegate.h */,
+				18D612E41D1D1EBD008E94D0 /* AppDelegate.m */,
+				18D612E51D1D1EBD008E94D0 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		18D612E61D1D1EBD008E94D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18D613291D1D634C008E94D0 /* ZRSearchBar.h */,
+				18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D612EA1D1D203E008E94D0 /* Book(书海) */ = {
+			isa = PBXGroup;
+			children = (
+				18D612EB1D1D203E008E94D0 /* Controller */,
+				18D612EC1D1D203E008E94D0 /* Model */,
+				18D612ED1D1D203E008E94D0 /* View */,
+			);
+			path = "Book(书海)";
+			sourceTree = "<group>";
+		};
+		18D612EB1D1D203E008E94D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D613111D1D2246008E94D0 /* ZRBookViewController.h */,
+				18D613121D1D2246008E94D0 /* ZRBookViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D612EC1D1D203E008E94D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D612ED1D1D203E008E94D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D612F61D1D2094008E94D0 /* Buy(购物车) */ = {
+			isa = PBXGroup;
+			children = (
+				18D612F71D1D2094008E94D0 /* Controller */,
+				18D612F81D1D2094008E94D0 /* Model */,
+				18D612F91D1D2094008E94D0 /* View */,
+			);
+			path = "Buy(购物车)";
+			sourceTree = "<group>";
+		};
+		18D612F71D1D2094008E94D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D613231D1D5F0F008E94D0 /* ZRBuyViewController.h */,
+				18D613241D1D5F0F008E94D0 /* ZRBuyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D612F81D1D2094008E94D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D612F91D1D2094008E94D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D612FA1D1D20A0008E94D0 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				18D612FB1D1D20A0008E94D0 /* Controller */,
+				18D612FC1D1D20A0008E94D0 /* Model */,
+				18D612FD1D1D20A0008E94D0 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		18D612FB1D1D20A0008E94D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D613051D1D217D008E94D0 /* ZRHomeViewController.h */,
+				18D613061D1D217D008E94D0 /* ZRHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D612FC1D1D20A0008E94D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D612FD1D1D20A0008E94D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D612FE1D1D20AB008E94D0 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				18D612FF1D1D20AB008E94D0 /* Controller */,
+				18D613001D1D20AB008E94D0 /* Model */,
+				18D613011D1D20AB008E94D0 /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		18D612FF1D1D20AB008E94D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D613261D1D5F3A008E94D0 /* ZRProfileViewController.h */,
+				18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D613001D1D20AB008E94D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D613011D1D20AB008E94D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +329,7 @@
 		18D612B71D1D1BF0008E94D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZR;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zhangrui;
 				TargetAttributes = {
@@ -139,7 +364,6 @@
 			files = (
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
 				18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */,
-				18D612CD1D1D1BF0008E94D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,23 +374,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D612CA1D1D1BF0008E94D0 /* ViewController.m in Sources */,
-				18D612C71D1D1BF0008E94D0 /* AppDelegate.m in Sources */,
-				18D612C41D1D1BF0008E94D0 /* main.m in Sources */,
+				18D612E91D1D1EBD008E94D0 /* main.m in Sources */,
+				18D613071D1D217D008E94D0 /* ZRHomeViewController.m in Sources */,
+				18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */,
+				18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */,
+				18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */,
+				18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */,
+				18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */,
+				18D613191D1D4CD2008E94D0 /* ZRMainNavigation.m in Sources */,
+				18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */,
+				18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18D612CB1D1D1BF0008E94D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18D612CC1D1D1BF0008E94D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
