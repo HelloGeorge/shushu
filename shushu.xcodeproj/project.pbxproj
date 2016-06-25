@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182857E91D1E255A0050DFCA /* ZRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857E71D1E255A0050DFCA /* ZRTableViewCell.m */; };
+		182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */; };
+		182857EE1D1E62870050DFCA /* ZRPersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */; };
+		182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */; };
+		182857F11D1E6C3A0050DFCA /* person.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182857F01D1E6C3A0050DFCA /* person.plist */; };
+		182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
 		18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */; };
 		18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612E41D1D1EBD008E94D0 /* AppDelegate.m */; };
@@ -22,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182857E61D1E255A0050DFCA /* ZRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTableViewCell.h; sourceTree = "<group>"; };
+		182857E71D1E255A0050DFCA /* ZRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTableViewCell.m; sourceTree = "<group>"; };
+		182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRTableViewCell.xib; sourceTree = "<group>"; };
+		182857EB1D1E62870050DFCA /* ZRPersonalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPersonalTableViewCell.h; sourceTree = "<group>"; };
+		182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPersonalTableViewCell.m; sourceTree = "<group>"; };
+		182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRPersonalTableViewCell.xib; sourceTree = "<group>"; };
+		182857F01D1E6C3A0050DFCA /* person.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = person.plist; sourceTree = "<group>"; };
+		182857F51D1E98500050DFCA /* ZRGroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGroupHeaderView.h; sourceTree = "<group>"; };
+		182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGroupHeaderView.m; sourceTree = "<group>"; };
 		18D612BF1D1D1BF0008E94D0 /* shushu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shushu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D612D11D1D1BF0008E94D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				18D612D31D1D1BF0008E94D0 /* Info.plist */,
+				182857F01D1E6C3A0050DFCA /* person.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,6 +183,9 @@
 			children = (
 				18D613291D1D634C008E94D0 /* ZRSearchBar.h */,
 				18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */,
+				182857E61D1E255A0050DFCA /* ZRTableViewCell.h */,
+				182857E71D1E255A0050DFCA /* ZRTableViewCell.m */,
+				182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +318,11 @@
 		18D613011D1D20AB008E94D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				182857EB1D1E62870050DFCA /* ZRPersonalTableViewCell.h */,
+				182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */,
+				182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */,
+				182857F51D1E98500050DFCA /* ZRGroupHeaderView.h */,
+				182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,8 +386,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */,
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
+				182857F11D1E6C3A0050DFCA /* person.plist in Resources */,
 				18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */,
+				182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +408,12 @@
 				18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */,
 				18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */,
 				18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */,
+				182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */,
+				182857EE1D1E62870050DFCA /* ZRPersonalTableViewCell.m in Sources */,
 				18D613191D1D4CD2008E94D0 /* ZRMainNavigation.m in Sources */,
 				18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */,
 				18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */,
+				182857E91D1E255A0050DFCA /* ZRTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +552,7 @@
 				18D612D81D1D1BF0008E94D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

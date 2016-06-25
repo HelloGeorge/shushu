@@ -7,6 +7,8 @@
 //
 
 #import "ZRProfileViewController.h"
+#import "ZRPersonalTableViewCell.h"
+#import "ZRGroupHeaderView.h"
 
 @interface ZRProfileViewController ()
 
@@ -19,6 +21,7 @@
     
     self.navigationItem.title = @"个人中心";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"退出" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    
 }
 
 - (void)back{
@@ -27,67 +30,112 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+    
+    if (section == 0) {
+        return 1;
+    }else if(section == 1){
+        return 1;
+    }else if(section == 2){
+        return 8;
+    }else{
+        return 1;
+    }
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    ZRPersonalTableViewCell *cell = [[ZRPersonalTableViewCell alloc] init];
+    if (indexPath.section == 0) {
+        //加载xib
+        cell = [ZRPersonalTableViewCell personalInfo];
+    }else if (indexPath.section == 1){
+        cell = [ZRPersonalTableViewCell groupCell];
+        cell.text = @"我的订单";
+    }else if(indexPath.section == 2){
+        if(indexPath.row == 0){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"用户信息";
+        }else if(indexPath.row == 1){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"我的书单";
+        }else if(indexPath.row == 2){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"我的收藏";
+        }else if(indexPath.row == 3){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"我的评价";
+        }else if(indexPath.row == 4){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"与我相关";
+        }else if(indexPath.row == 5){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"我的好友";
+        }else if(indexPath.row == 6){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"我的书币交易";
+        }else if(indexPath.row == 7){
+            cell = [ZRPersonalTableViewCell groupCell];
+            cell.text = @"意见反馈";
+        }
+    }else{
+        cell = [ZRPersonalTableViewCell groupCell];
+        cell.text = @"修改密码";
+    }
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+//实现UITableView的设置分组标题的方法
+//下面这个方法只能显示每一组的组标题
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    if (section == 1) {
+//        return @"我的订单";
+//    }else if(section == 2){
+//        return @"会员中心";
+//    }else if(section == 3){
+//        return @"安全中心";
+//    }else{
+//        return nil;
+//    }
+//}
+
+//可以自定义设置每一组的headerView
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    ZRGroupHeaderView *view;
+    if (section == 1) {
+        view = [ZRGroupHeaderView groupHeader:tableView image:@"u_icon_1" text:@"我的订单"];
+    }else if(section == 2){
+        view = [ZRGroupHeaderView groupHeader:tableView image:@"u_icon_2" text:@"会员中心"];
+    }else if(section == 3){
+        view = [ZRGroupHeaderView groupHeader:tableView image:@"u_icon_3" text:@"安全中心"];
+    }else if(section == 0){
+        UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
+        return v;
+    }
+    return view;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 200;
+    }else{
+        return 40;
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 0;
+    }else{
+        return 60;
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

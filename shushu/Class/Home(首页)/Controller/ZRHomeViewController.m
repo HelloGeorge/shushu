@@ -9,6 +9,7 @@
 #import "ZRHomeViewController.h"
 #import "UIView+ZRExtension.h"
 #import "ZRSearchBar.h"
+#import "ZRTableViewCell.h"
 #define ZRBanCount 3
 
 @interface ZRHomeViewController ()<UIScrollViewDelegate>
@@ -140,11 +141,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    ZRTableViewCell *cell = [[ZRTableViewCell alloc] init];
     if (indexPath.row == 0) {
-        
+        cell = [ZRTableViewCell functionButton];
     }else if(indexPath.row == 1){
-    
+        cell = [ZRTableViewCell newOut];
     }else{
         
     }
@@ -156,8 +157,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return 140;
+    }else if(indexPath.row == 1){
+        return 60;
     }else{
-        return 40;
+        return 100;
     }
 }
 
