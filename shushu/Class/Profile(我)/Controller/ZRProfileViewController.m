@@ -55,37 +55,27 @@
         //加载xib
         cell = [ZRPersonalTableViewCell personalInfo];
     }else if (indexPath.section == 1){
-        cell = [ZRPersonalTableViewCell groupCell];
-        cell.text = @"我的订单";
+        cell.textLabel.text = @"我的订单";
     }else if(indexPath.section == 2){
         if(indexPath.row == 0){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"用户信息";
+            cell.textLabel.text = @"用户信息";
         }else if(indexPath.row == 1){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"我的书单";
+            cell.textLabel.text = @"我的书单";
         }else if(indexPath.row == 2){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"我的收藏";
+            cell.textLabel.text = @"我的收藏";
         }else if(indexPath.row == 3){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"我的评价";
+            cell.textLabel.text = @"我的评价";
         }else if(indexPath.row == 4){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"与我相关";
+            cell.textLabel.text = @"与我相关";
         }else if(indexPath.row == 5){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"我的好友";
+            cell.textLabel.text = @"我的好友";
         }else if(indexPath.row == 6){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"我的书币交易";
+            cell.textLabel.text = @"我的书币交易";
         }else if(indexPath.row == 7){
-            cell = [ZRPersonalTableViewCell groupCell];
-            cell.text = @"意见反馈";
+            cell.textLabel.text = @"意见反馈";
         }
     }else{
-        cell = [ZRPersonalTableViewCell groupCell];
-        cell.text = @"修改密码";
+        cell.textLabel.text = @"修改密码";
     }
     return cell;
 }

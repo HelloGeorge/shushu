@@ -10,13 +10,8 @@
 
 @interface ZRPersonalTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *icon;
-@property (weak, nonatomic) IBOutlet UILabel *lbl;
-@property (nonatomic,assign) NSString *text;
-
 
 + (instancetype)personalInfo;
 
-+ (instancetype)groupCell;
 
 @end

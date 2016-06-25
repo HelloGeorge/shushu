@@ -25,17 +25,11 @@
     // Configure the view for the selected state
 }
 
-- (void)setText:(NSString *)text{
-    _text = text;
-    _lbl.text = _text;
-}
 
 + (instancetype)personalInfo{
     return [[[NSBundle mainBundle] loadNibNamed:@"ZRPersonalTableViewCell" owner:nil options:nil] firstObject];
 }
 
-+ (instancetype)groupCell{
-    return [[[NSBundle mainBundle] loadNibNamed:@"ZRPersonalTableViewCell" owner:nil options:nil] lastObject];
-}
+
 
 @end
