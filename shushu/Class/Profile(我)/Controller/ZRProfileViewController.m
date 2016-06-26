@@ -54,6 +54,11 @@
     if (indexPath.section == 0) {
         //加载xib
         cell = [ZRPersonalTableViewCell personalInfo];
+        //加载plist文件
+        
+        //1.获取plist文件的路径，放入path的变量中
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"person.plist" ofType:nil];
+        cell.person = [NSArray arrayWithContentsOfFile:path];
     }else if (indexPath.section == 1){
         cell.textLabel.text = @"我的订单";
     }else if(indexPath.section == 2){

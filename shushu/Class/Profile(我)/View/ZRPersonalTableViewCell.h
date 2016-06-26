@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface ZRPersonalTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *userIcon;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userRank;
+@property (weak, nonatomic) IBOutlet UILabel *userShu;
+@property (weak, nonatomic) IBOutlet UILabel *userExp;
+- (IBAction)goStore:(id)sender;
+- (IBAction)qianDao:(id)sender;
+
+@property (nonatomic,strong) NSArray *person;
 
 
 + (instancetype)personalInfo;

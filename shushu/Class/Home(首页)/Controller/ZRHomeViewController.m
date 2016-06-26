@@ -92,6 +92,9 @@
     //创建一个消息循环对象，获得当前的循环消息
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    //去掉tableView之间的分组线
+    self.tableView.separatorStyle = NO;
 }
 
 - (void)choose{

@@ -25,6 +25,10 @@
 		18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613241D1D5F0F008E94D0 /* ZRBuyViewController.m */; };
 		18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */; };
 		18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */; };
+		18F1586B1D1F673A00DC6C43 /* ZRBuyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */; };
+		18F1586E1D1FAB1200DC6C43 /* goods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F1586D1D1FAB1200DC6C43 /* goods.plist */; };
+		18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */; };
+		18F158731D1FE0FC00DC6C43 /* ZRBuyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,12 @@
 		18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRProfileViewController.m; sourceTree = "<group>"; };
 		18D613291D1D634C008E94D0 /* ZRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSearchBar.h; sourceTree = "<group>"; };
 		18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSearchBar.m; sourceTree = "<group>"; };
+		18F158681D1F673A00DC6C43 /* ZRBuyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyViewCell.h; sourceTree = "<group>"; };
+		18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyViewCell.m; sourceTree = "<group>"; };
+		18F1586D1D1FAB1200DC6C43 /* goods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = goods.plist; sourceTree = "<group>"; };
+		18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBuyViewCell.xib; sourceTree = "<group>"; };
+		18F158711D1FE0FC00DC6C43 /* ZRBuyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyHeaderView.h; sourceTree = "<group>"; };
+		18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 			children = (
 				18D612D31D1D1BF0008E94D0 /* Info.plist */,
 				182857F01D1E6C3A0050DFCA /* person.plist */,
+				18F1586D1D1FAB1200DC6C43 /* goods.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,6 +263,11 @@
 		18D612F91D1D2094008E94D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */,
+				18F158681D1F673A00DC6C43 /* ZRBuyViewCell.h */,
+				18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */,
+				18F158711D1FE0FC00DC6C43 /* ZRBuyHeaderView.h */,
+				18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +405,8 @@
 				182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */,
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
 				182857F11D1E6C3A0050DFCA /* person.plist in Resources */,
+				18F1586E1D1FAB1200DC6C43 /* goods.plist in Resources */,
+				18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */,
 				18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */,
 				182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */,
 			);
@@ -402,10 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D612E91D1D1EBD008E94D0 /* main.m in Sources */,
+				18F1586B1D1F673A00DC6C43 /* ZRBuyViewCell.m in Sources */,
 				18D613071D1D217D008E94D0 /* ZRHomeViewController.m in Sources */,
 				18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */,
 				18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */,
 				18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */,
+				18F158731D1FE0FC00DC6C43 /* ZRBuyHeaderView.m in Sources */,
 				18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */,
 				18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */,
 				182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */,

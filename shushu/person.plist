@@ -2,8 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string></string>
-	<string></string>
-	<string></string>
+	<dict>
+		<key>userExp</key>
+		<string>124</string>
+		<key>userShu</key>
+		<string>85</string>
+		<key>userRank</key>
+		<string>铜牌会员</string>
+		<key>userName</key>
+		<string>郑红</string>
+		<key>userImg</key>
+		<string>u_img</string>
+	</dict>
 </array>
 </plist>

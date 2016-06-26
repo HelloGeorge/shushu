@@ -25,6 +25,22 @@
     // Configure the view for the selected state
 }
 
+- (void)setPerson:(NSArray *)person{
+    _person = person;
+    NSDictionary *p = _person[0];
+    _userIcon.image = [UIImage imageNamed:p[@"userImg"]];
+    _userName.text = p[@"userName"];
+    _userRank.text = p[@"userRank"];
+    _userShu.text = p[@"userShu"];
+    _userExp.text = p[@"userExp"];
+}
+
+
+- (IBAction)goStore:(id)sender {
+}
+
+- (IBAction)qianDao:(id)sender {
+}
 
 + (instancetype)personalInfo{
     return [[[NSBundle mainBundle] loadNibNamed:@"ZRPersonalTableViewCell" owner:nil options:nil] firstObject];
