@@ -7,9 +7,12 @@
 //
 
 #import "ZRBuyViewCell.h"
+#import "ZRBuyViewController.h"
 
 
 @interface ZRBuyViewCell ()
+
+
 
 @end
 
@@ -25,25 +28,30 @@
     // Configure the view for the selected state
 }
 
-- (void)setGoods:(NSArray *)goods{
+- (void)setGoods:(ZRGoods *)goods{
     _goods = goods;
     //取得字典
-    NSDictionary *g = _goods[0];
+//    NSDictionary *g = _goods[0];
 //    [_store setTitle:[NSString stringWithFormat:@"%@→",g[@"store"]] forState:UIControlStateNormal];
-    _goodsImg.image = [UIImage imageNamed:g[@"goodsImg"]];
-    _goodsDesc.text = g[@"goodsDesc"];
-    _goodsKind.text = [NSString stringWithFormat:@"颜色分类:%@",g[@"goodsKind"]];
-    _goodsPrice.text = g[@"goodsSell"];
-    _goodsCount.text = [NSString stringWithFormat:@"×%@",g[@"goodsCount"]];
+    _goodsImg.image = [UIImage imageNamed:_goods.goodsImg];
+    _goodsDesc.text = _goods.goodsDesc;
+    _goodsKind.text = [NSString stringWithFormat:@"颜色分类:%@",_goods.goodsKind];
+    _goodsPrice.text = [NSString stringWithFormat:@"%f",_goods.goodsPrice];
+    _goodsCount.text = [NSString stringWithFormat:@"×%d",_goods.goodsCount];
     
 }
 
 
 //选择商品
 - (IBAction)chooseBtn:(id)sender {
-//    NSLog(@"选择商品");
     //按钮状态取反
     _choose.selected = !_choose.isSelected;
+    //商品的选择状态取反
+    _goods.isSel = !_goods.isSel;
+    //只有当代理实现了这个方法才会去执行
+    if ([self.delegate respondsToSelector:@selector(chooseBtnClick:)]) {
+        [self.delegate chooseBtnClick:self];
+    }
 }
 
 ////编辑商品
@@ -69,6 +77,24 @@
 + (instancetype)buyViewCell{
     return [[[NSBundle mainBundle] loadNibNamed:@"ZRBuyViewCell" owner:nil options:nil] lastObject];
 }
+
+//删除商品的按钮
+- (IBAction)deleteBtn:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(deleteBtnClick:)]) {
+        [self.delegate deleteBtnClick:self];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

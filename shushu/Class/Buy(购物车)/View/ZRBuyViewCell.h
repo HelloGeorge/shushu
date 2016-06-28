@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZRGoods.h"
+@class ZRBuyViewCell;
+
+@protocol ZRBuyViewCellDelegate <NSObject>
+
+- (void)deleteBtnClick:(ZRBuyViewCell *)cell;
+- (void)chooseBtnClick:(ZRBuyViewCell *)cell;
+
+@end
 
 @interface ZRBuyViewCell : UITableViewCell
+
+@property (nonatomic,weak) id<ZRBuyViewCellDelegate> delegate;
+
 
 - (IBAction)chooseBtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *goodsImg;
@@ -19,8 +31,11 @@
 @property (weak, nonatomic) IBOutlet UIView *goodsView;
 
 @property (weak, nonatomic) IBOutlet UIButton *choose;
+- (IBAction)deleteBtn:(id)sender;
 
-@property (nonatomic,strong) NSArray *goods;
+@property (nonatomic,strong) ZRGoods *goods;
+
+@property (nonatomic,assign) NSInteger section;
 
 
 + (instancetype)buyViewCell;

@@ -66,7 +66,7 @@
 
 //进入店铺
 - (void)goStore{
-    NSLog(@"进入店铺");
+    NSLog(@"进入店铺"); 
 }
 
 //编辑
@@ -80,6 +80,8 @@
         cell.goodsView.x = -40;
         self.isSel = true;
     }
+    cell.section = self.section;
+    
 }
 
 @end

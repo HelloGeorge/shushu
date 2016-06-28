@@ -16,5 +16,19 @@
 		<key>store</key>
 		<string>书书平台之曲智</string>
 	</dict>
+	<dict>
+		<key>goodsDesc</key>
+		<string>号环境  哈哈哈看见后来客户 立刻回老家  老客户了好看浏览开户行 控件看了会离开 </string>
+		<key>goodsKind</key>
+		<string>红色</string>
+		<key>goodsSell</key>
+		<string>28.5</string>
+		<key>goodsCount</key>
+		<string>5</string>
+		<key>goodsImg</key>
+		<string>10003</string>
+		<key>store</key>
+		<string>书书平台之曲智</string>
+	</dict>
 </array>
 </plist>

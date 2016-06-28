@@ -13,6 +13,7 @@
 		182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */; };
 		182857F11D1E6C3A0050DFCA /* person.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182857F01D1E6C3A0050DFCA /* person.plist */; };
 		182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */; };
+		18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D12D561D222A3400B77B86 /* ZRGoods.m */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
 		18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */; };
 		18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612E41D1D1EBD008E94D0 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		182857F01D1E6C3A0050DFCA /* person.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = person.plist; sourceTree = "<group>"; };
 		182857F51D1E98500050DFCA /* ZRGroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGroupHeaderView.h; sourceTree = "<group>"; };
 		182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGroupHeaderView.m; sourceTree = "<group>"; };
+		18D12D551D222A3400B77B86 /* ZRGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGoods.h; sourceTree = "<group>"; };
+		18D12D561D222A3400B77B86 /* ZRGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGoods.m; sourceTree = "<group>"; };
 		18D612BF1D1D1BF0008E94D0 /* shushu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shushu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D612D11D1D1BF0008E94D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				18D612D91D1D1EBD008E94D0 /* Class */,
-				18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */,
-				18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */,
 				18D612C21D1D1BF0008E94D0 /* Supporting Files */,
 			);
 			path = shushu;
@@ -113,6 +114,8 @@
 		18D612C21D1D1BF0008E94D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */,
+				18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */,
 				18D612D31D1D1BF0008E94D0 /* Info.plist */,
 				182857F01D1E6C3A0050DFCA /* person.plist */,
 				18F1586D1D1FAB1200DC6C43 /* goods.plist */,
@@ -256,6 +259,8 @@
 		18D612F81D1D2094008E94D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18D12D551D222A3400B77B86 /* ZRGoods.h */,
+				18D12D561D222A3400B77B86 /* ZRGoods.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */,
 				182857EE1D1E62870050DFCA /* ZRPersonalTableViewCell.m in Sources */,
 				18D613191D1D4CD2008E94D0 /* ZRMainNavigation.m in Sources */,
+				18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */,
 				18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */,
 				18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */,
 				182857E91D1E255A0050DFCA /* ZRTableViewCell.m in Sources */,
