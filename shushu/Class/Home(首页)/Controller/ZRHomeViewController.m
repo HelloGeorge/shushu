@@ -10,6 +10,7 @@
 #import "UIView+ZRExtension.h"
 #import "ZRSearchBar.h"
 #import "ZRTableViewCell.h"
+#import "ZRInfoViewController.h"
 #define ZRBanCount 3
 
 @interface ZRHomeViewController ()<UIScrollViewDelegate>
@@ -39,6 +40,22 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"东油" style:UIBarButtonItemStyleDone target:self action:@selector(choose)];
     
     //创建一个图片轮播器
+    [self imgScroll];
+    
+    
+    //创建一个NSTimer控件
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(scrollTimer) userInfo:nil repeats:YES];
+    //改变NSTimer的优先级，让它的优先级和控件一样
+    //创建一个消息循环对象，获得当前的循环消息
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    //去掉tableView之间的分组线
+    self.tableView.separatorStyle = NO;
+}
+
+//设置图片轮播器
+- (void)imgScroll{
     //1.创建一个scrollView
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.size = CGSizeMake(self.view.width, 160);
@@ -70,31 +87,24 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
     
+    scrollView.delegate = self;
+    
+    self.tableView.tableHeaderView = scrollView;
+    
+    self.scrollView = scrollView;
+    
     //添加一个UIPageControll
     UIPageControl *pageControl = [[UIPageControl alloc] init];
     pageControl.numberOfPages = ZRBanCount;
     //不设置宽高，那么UIPageControll就不会有点击事件
-//    pageControl.height = 50;
-//    pageControl.width = 100;
+    //    pageControl.height = 50;
+    //    pageControl.width = 100;
     pageControl.centerX = self.view.width * 0.5;
     pageControl.y = scrollH - 15;
     pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     pageControl.pageIndicatorTintColor = [UIColor colorWithRed:183/255.0 green:183/255.0 blue:183/255.0 alpha:1.0];
     self.pageControl = pageControl;
-    scrollView.delegate = self;
-    
-    self.tableView.tableHeaderView = scrollView;
     [self.view addSubview:pageControl];
-    self.scrollView = scrollView;
-    //创建一个NSTimer控件
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(scrollTimer) userInfo:nil repeats:YES];
-    //改变NSTimer的优先级，让它的优先级和控件一样
-    //创建一个消息循环对象，获得当前的循环消息
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
-    
-    //去掉tableView之间的分组线
-    self.tableView.separatorStyle = NO;
 }
 
 - (void)choose{
@@ -165,6 +175,11 @@
     }else{
         return 100;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ZRInfoViewController *vc = [[ZRInfoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

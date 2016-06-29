@@ -36,7 +36,7 @@
     _goodsImg.image = [UIImage imageNamed:_goods.goodsImg];
     _goodsDesc.text = _goods.goodsDesc;
     _goodsKind.text = [NSString stringWithFormat:@"颜色分类:%@",_goods.goodsKind];
-    _goodsPrice.text = [NSString stringWithFormat:@"%f",_goods.goodsPrice];
+    _goodsPrice.text = [NSString stringWithFormat:@"%.1f",_goods.goodsPrice];
     _goodsCount.text = [NSString stringWithFormat:@"×%d",_goods.goodsCount];
     
 }

@@ -11,6 +11,7 @@
 #import "ZRBuyHeaderView.h"
 #import "ZRGoods.h"
 #import "UIView+ZRExtension.h"
+#import "ZROrderViewController.h"
 
 @interface ZRBuyViewController ()<ZRBuyViewCellDelegate>
 //存放商品信息模型的可变数组
@@ -62,6 +63,11 @@ static float allPrice = 0;
 //    self.tableView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
     
     //创建一个底部的显示总价格的view
+    [self createBotView];
+}
+
+//创建一个底部的显示总价格的view
+- (void)createBotView{
     UIView *view = [[UIView alloc] init];
     view.x = 0;
     view.y = [[UIApplication sharedApplication] keyWindow].height - 89;
@@ -69,7 +75,12 @@ static float allPrice = 0;
     view.height = 40;
     //设置view的背景色
     view.backgroundColor = [UIColor whiteColor];
-    [[[UIApplication sharedApplication] keyWindow] addSubview:view];
+//    [[[UIApplication sharedApplication] keyWindow] addSubview:view];
+//    [self.tableView addSubview:view];
+//    [self.tableView bringSubviewToFront:view];
+//    [[[UIApplication sharedApplication].windows lastObject] addSubview:view];
+    //将视图添加到导航栏中
+    [self.navigationController.view addSubview:view];
     //添加底部view中的子控件
     //添加全选按钮
     UIButton *allBtn = [[UIButton alloc] init];
@@ -131,7 +142,10 @@ static float allPrice = 0;
 
 //结算
 - (void)page{
-    NSLog(@"结算");
+    if (allPrice != 0) {   //如果选择了商品
+        ZROrderViewController *orderVc = [[ZROrderViewController alloc] init];
+        [self.navigationController pushViewController:orderVc animated:YES];
+    }
 }
 
 - (void)selectThing{

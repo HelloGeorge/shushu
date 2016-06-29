@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1827BEA61D23A35700B1440B /* ZRInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827BEA51D23A35700B1440B /* ZRInfoViewController.m */; };
+		1827BEAA1D23A3ED00B1440B /* ZRBuyBookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827BEA81D23A3ED00B1440B /* ZRBuyBookViewCell.m */; };
+		1827BEAB1D23A3ED00B1440B /* ZRBuyBookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1827BEA91D23A3ED00B1440B /* ZRBuyBookViewCell.xib */; };
+		1827BEAF1D23A42A00B1440B /* ZRBookIntroViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827BEAD1D23A42A00B1440B /* ZRBookIntroViewCell.m */; };
+		1827BEB01D23A42A00B1440B /* ZRBookIntroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1827BEAE1D23A42A00B1440B /* ZRBookIntroViewCell.xib */; };
+		1827BEB41D23A50F00B1440B /* ZRJudgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827BEB21D23A50F00B1440B /* ZRJudgeViewCell.m */; };
+		1827BEB51D23A50F00B1440B /* ZRJudgeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1827BEB31D23A50F00B1440B /* ZRJudgeViewCell.xib */; };
 		182857E91D1E255A0050DFCA /* ZRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857E71D1E255A0050DFCA /* ZRTableViewCell.m */; };
 		182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */; };
 		182857EE1D1E62870050DFCA /* ZRPersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */; };
 		182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */; };
 		182857F11D1E6C3A0050DFCA /* person.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182857F01D1E6C3A0050DFCA /* person.plist */; };
 		182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */; };
+		18858E171D2363330014AC2D /* ZROrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18858E161D2363330014AC2D /* ZROrderViewController.m */; };
+		18858E1E1D2368770014AC2D /* ZROrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18858E1C1D2368770014AC2D /* ZROrderViewCell.m */; };
+		18858E1F1D2368770014AC2D /* ZROrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */; };
 		18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D12D561D222A3400B77B86 /* ZRGoods.m */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
 		18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */; };
@@ -33,6 +43,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1827BEA41D23A35700B1440B /* ZRInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRInfoViewController.h; sourceTree = "<group>"; };
+		1827BEA51D23A35700B1440B /* ZRInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRInfoViewController.m; sourceTree = "<group>"; };
+		1827BEA71D23A3ED00B1440B /* ZRBuyBookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyBookViewCell.h; sourceTree = "<group>"; };
+		1827BEA81D23A3ED00B1440B /* ZRBuyBookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyBookViewCell.m; sourceTree = "<group>"; };
+		1827BEA91D23A3ED00B1440B /* ZRBuyBookViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBuyBookViewCell.xib; sourceTree = "<group>"; };
+		1827BEAC1D23A42A00B1440B /* ZRBookIntroViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBookIntroViewCell.h; sourceTree = "<group>"; };
+		1827BEAD1D23A42A00B1440B /* ZRBookIntroViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBookIntroViewCell.m; sourceTree = "<group>"; };
+		1827BEAE1D23A42A00B1440B /* ZRBookIntroViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBookIntroViewCell.xib; sourceTree = "<group>"; };
+		1827BEB11D23A50F00B1440B /* ZRJudgeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRJudgeViewCell.h; sourceTree = "<group>"; };
+		1827BEB21D23A50F00B1440B /* ZRJudgeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRJudgeViewCell.m; sourceTree = "<group>"; };
+		1827BEB31D23A50F00B1440B /* ZRJudgeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRJudgeViewCell.xib; sourceTree = "<group>"; };
 		182857E61D1E255A0050DFCA /* ZRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTableViewCell.h; sourceTree = "<group>"; };
 		182857E71D1E255A0050DFCA /* ZRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTableViewCell.m; sourceTree = "<group>"; };
 		182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRTableViewCell.xib; sourceTree = "<group>"; };
@@ -42,6 +63,11 @@
 		182857F01D1E6C3A0050DFCA /* person.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = person.plist; sourceTree = "<group>"; };
 		182857F51D1E98500050DFCA /* ZRGroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGroupHeaderView.h; sourceTree = "<group>"; };
 		182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGroupHeaderView.m; sourceTree = "<group>"; };
+		18858E151D2363330014AC2D /* ZROrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderViewController.h; sourceTree = "<group>"; };
+		18858E161D2363330014AC2D /* ZROrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderViewController.m; sourceTree = "<group>"; };
+		18858E1B1D2368770014AC2D /* ZROrderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderViewCell.h; sourceTree = "<group>"; };
+		18858E1C1D2368770014AC2D /* ZROrderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderViewCell.m; sourceTree = "<group>"; };
+		18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZROrderViewCell.xib; sourceTree = "<group>"; };
 		18D12D551D222A3400B77B86 /* ZRGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGoods.h; sourceTree = "<group>"; };
 		18D12D561D222A3400B77B86 /* ZRGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGoods.m; sourceTree = "<group>"; };
 		18D612BF1D1D1BF0008E94D0 /* shushu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shushu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +112,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1827BEA01D23A25B00B1440B /* Info(书的详情) */ = {
+			isa = PBXGroup;
+			children = (
+				1827BEA11D23A25B00B1440B /* Controller */,
+				1827BEA21D23A25B00B1440B /* Model */,
+				1827BEA31D23A25B00B1440B /* View */,
+			);
+			path = "Info(书的详情)";
+			sourceTree = "<group>";
+		};
+		1827BEA11D23A25B00B1440B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1827BEA41D23A35700B1440B /* ZRInfoViewController.h */,
+				1827BEA51D23A35700B1440B /* ZRInfoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1827BEA21D23A25B00B1440B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1827BEA31D23A25B00B1440B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1827BEA71D23A3ED00B1440B /* ZRBuyBookViewCell.h */,
+				1827BEA81D23A3ED00B1440B /* ZRBuyBookViewCell.m */,
+				1827BEA91D23A3ED00B1440B /* ZRBuyBookViewCell.xib */,
+				1827BEAC1D23A42A00B1440B /* ZRBookIntroViewCell.h */,
+				1827BEAD1D23A42A00B1440B /* ZRBookIntroViewCell.m */,
+				1827BEAE1D23A42A00B1440B /* ZRBookIntroViewCell.xib */,
+				1827BEB11D23A50F00B1440B /* ZRJudgeViewCell.h */,
+				1827BEB21D23A50F00B1440B /* ZRJudgeViewCell.m */,
+				1827BEB31D23A50F00B1440B /* ZRJudgeViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18858E0C1D23613F0014AC2D /* Order(订单) */ = {
+			isa = PBXGroup;
+			children = (
+				18858E0D1D23613F0014AC2D /* Controller */,
+				18858E0E1D23613F0014AC2D /* Model */,
+				18858E0F1D23613F0014AC2D /* View */,
+			);
+			path = "Order(订单)";
+			sourceTree = "<group>";
+		};
+		18858E0D1D23613F0014AC2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18858E151D2363330014AC2D /* ZROrderViewController.h */,
+				18858E161D2363330014AC2D /* ZROrderViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18858E0E1D23613F0014AC2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18858E0F1D23613F0014AC2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18858E1B1D2368770014AC2D /* ZROrderViewCell.h */,
+				18858E1C1D2368770014AC2D /* ZROrderViewCell.m */,
+				18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18D612B61D1D1BF0008E94D0 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +230,8 @@
 		18D612D91D1D1EBD008E94D0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1827BEA01D23A25B00B1440B /* Info(书的详情) */,
+				18858E0C1D23613F0014AC2D /* Order(订单) */,
 				18D612FE1D1D20AB008E94D0 /* Profile(我) */,
 				18D612FA1D1D20A0008E94D0 /* Home(首页) */,
 				18D612F61D1D2094008E94D0 /* Buy(购物车) */,
@@ -410,10 +516,14 @@
 				182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */,
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
 				182857F11D1E6C3A0050DFCA /* person.plist in Resources */,
+				1827BEAB1D23A3ED00B1440B /* ZRBuyBookViewCell.xib in Resources */,
+				1827BEB01D23A42A00B1440B /* ZRBookIntroViewCell.xib in Resources */,
 				18F1586E1D1FAB1200DC6C43 /* goods.plist in Resources */,
 				18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */,
 				18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */,
 				182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */,
+				18858E1F1D2368770014AC2D /* ZROrderViewCell.xib in Resources */,
+				1827BEB51D23A50F00B1440B /* ZRJudgeViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827BEA61D23A35700B1440B /* ZRInfoViewController.m in Sources */,
 				18D612E91D1D1EBD008E94D0 /* main.m in Sources */,
 				18F1586B1D1F673A00DC6C43 /* ZRBuyViewCell.m in Sources */,
 				18D613071D1D217D008E94D0 /* ZRHomeViewController.m in Sources */,
@@ -431,6 +542,8 @@
 				18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */,
 				18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */,
 				18F158731D1FE0FC00DC6C43 /* ZRBuyHeaderView.m in Sources */,
+				1827BEAA1D23A3ED00B1440B /* ZRBuyBookViewCell.m in Sources */,
+				18858E1E1D2368770014AC2D /* ZROrderViewCell.m in Sources */,
 				18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */,
 				18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */,
 				182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */,
@@ -439,6 +552,9 @@
 				18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */,
 				18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */,
 				18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */,
+				18858E171D2363330014AC2D /* ZROrderViewController.m in Sources */,
+				1827BEAF1D23A42A00B1440B /* ZRBookIntroViewCell.m in Sources */,
+				1827BEB41D23A50F00B1440B /* ZRJudgeViewCell.m in Sources */,
 				182857E91D1E255A0050DFCA /* ZRTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
