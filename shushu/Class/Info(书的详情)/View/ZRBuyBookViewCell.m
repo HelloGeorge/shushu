@@ -85,10 +85,47 @@
 
 //增加书的数量
 - (IBAction)plusCount:(id)sender {
+    int count = [self.countLbl.text intValue];
+    count++;
+    self.countLbl.text = [NSString stringWithFormat:@"%d",count];
 }
 
 //减少书的数量
 - (IBAction)minusCount:(id)sender {
+    int count = [self.countLbl.text intValue];
+    if (count > 1) {
+        count--;
+    }
+    self.countLbl.text = [NSString stringWithFormat:@"%d",count];
+}
+
+//将书籍加入到购物车中
+- (IBAction)buyThing:(id)sender {
+    //取得沙盒的路径
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingString:@"/buyThings.plist"];
+//    NSMutableArray *dic = [[NSMutableArray alloc] init];
+//    [dic setValue:@"123" forKey:@"book"];
+//    [dic writeToFile:fileName atomically:YES];
+    NSFileManager *fileM = [NSFileManager defaultManager];
+    if ([fileM fileExistsAtPath:fileName] == YES) {
+        //说明沙盒中已经存在这个文件，只需要将数组取出来
+        NSLog(@"YES");
+        NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:fileName];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        [dic setValue:@"1" forKey:@"book"];
+        [dic setValue:@6 forKey:@"count"];
+        [array addObject:dic];
+        [array writeToFile:fileName atomically:YES];
+    }else{
+        NSLog(@"NO");
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        [dic setValue:@"123" forKey:@"book"];
+        [dic setValue:@5 forKey:@"count"];
+        [array addObject:dic];
+        [array writeToFile:fileName atomically:YES];
+    }
 }
 
 + (instancetype)buyBookCell{

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *countLbl;
 - (IBAction)plusCount:(id)sender;
 - (IBAction)minusCount:(id)sender;
+- (IBAction)buyThing:(id)sender;
 
 
 + (instancetype)buyBookCell;

@@ -23,6 +23,8 @@
 		18858E171D2363330014AC2D /* ZROrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18858E161D2363330014AC2D /* ZROrderViewController.m */; };
 		18858E1E1D2368770014AC2D /* ZROrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18858E1C1D2368770014AC2D /* ZROrderViewCell.m */; };
 		18858E1F1D2368770014AC2D /* ZROrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */; };
+		188DC6F01D25298D00AADE65 /* ZRHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188DC6EE1D25298D00AADE65 /* ZRHomeViewCell.m */; };
+		188DC6F11D25298D00AADE65 /* ZRHomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188DC6EF1D25298D00AADE65 /* ZRHomeViewCell.xib */; };
 		18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D12D561D222A3400B77B86 /* ZRGoods.m */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
 		18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */; };
@@ -68,6 +70,9 @@
 		18858E1B1D2368770014AC2D /* ZROrderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderViewCell.h; sourceTree = "<group>"; };
 		18858E1C1D2368770014AC2D /* ZROrderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderViewCell.m; sourceTree = "<group>"; };
 		18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZROrderViewCell.xib; sourceTree = "<group>"; };
+		188DC6ED1D25298D00AADE65 /* ZRHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRHomeViewCell.h; sourceTree = "<group>"; };
+		188DC6EE1D25298D00AADE65 /* ZRHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRHomeViewCell.m; sourceTree = "<group>"; };
+		188DC6EF1D25298D00AADE65 /* ZRHomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRHomeViewCell.xib; sourceTree = "<group>"; };
 		18D12D551D222A3400B77B86 /* ZRGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGoods.h; sourceTree = "<group>"; };
 		18D12D561D222A3400B77B86 /* ZRGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGoods.m; sourceTree = "<group>"; };
 		18D612BF1D1D1BF0008E94D0 /* shushu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shushu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,6 +417,9 @@
 		18D612FD1D1D20A0008E94D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				188DC6ED1D25298D00AADE65 /* ZRHomeViewCell.h */,
+				188DC6EE1D25298D00AADE65 /* ZRHomeViewCell.m */,
+				188DC6EF1D25298D00AADE65 /* ZRHomeViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +532,7 @@
 				182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */,
 				18858E1F1D2368770014AC2D /* ZROrderViewCell.xib in Resources */,
 				1827BEB51D23A50F00B1440B /* ZRJudgeViewCell.xib in Resources */,
+				188DC6F11D25298D00AADE65 /* ZRHomeViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +560,7 @@
 				18D613191D1D4CD2008E94D0 /* ZRMainNavigation.m in Sources */,
 				18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */,
 				18D613131D1D2246008E94D0 /* ZRBookViewController.m in Sources */,
+				188DC6F01D25298D00AADE65 /* ZRHomeViewCell.m in Sources */,
 				18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */,
 				18858E171D2363330014AC2D /* ZROrderViewController.m in Sources */,
 				1827BEAF1D23A42A00B1440B /* ZRBookIntroViewCell.m in Sources */,

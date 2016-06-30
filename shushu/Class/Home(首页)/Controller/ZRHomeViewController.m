@@ -11,6 +11,7 @@
 #import "ZRSearchBar.h"
 #import "ZRTableViewCell.h"
 #import "ZRInfoViewController.h"
+#import "ZRHomeViewCell.h"
 #define ZRBanCount 3
 
 @interface ZRHomeViewController ()<UIScrollViewDelegate>
@@ -154,16 +155,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZRTableViewCell *cell = [[ZRTableViewCell alloc] init];
     if (indexPath.row == 0) {
-        cell = [ZRTableViewCell functionButton];
+        ZRTableViewCell *cell = [ZRTableViewCell functionButton];
+        return cell;
     }else if(indexPath.row == 1){
-        cell = [ZRTableViewCell newOut];
+        ZRTableViewCell *cell = [ZRTableViewCell newOut];
+        return cell;
     }else{
-        
+        ZRHomeViewCell *cell = [ZRHomeViewCell homeViewCell];
+        return cell;
     }
-    return cell;
-    
 }
 
 //设置每一行cell的高度

@@ -8,8 +8,10 @@
 
 #import "ZROrderViewController.h"
 #import "ZROrderViewCell.h"
+#import "ZRGoods.h"
 
 @interface ZROrderViewController ()
+
 
 @end
 

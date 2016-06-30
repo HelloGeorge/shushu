@@ -22,6 +22,9 @@
 @property (nonatomic,weak) UIButton *pBtn;
 //全选按钮
 @property (nonatomic,weak) UIButton *aBtn;
+//底部显示的view
+@property (nonatomic,weak) UIView *botView;
+
 
 
 
@@ -50,6 +53,12 @@ static float allPrice = 0;
     return _arrayModel;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (allPrice != 0) {
+        self.botView.hidden = NO;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,6 +78,7 @@ static float allPrice = 0;
 //创建一个底部的显示总价格的view
 - (void)createBotView{
     UIView *view = [[UIView alloc] init];
+    self.botView = view;
     view.x = 0;
     view.y = [[UIApplication sharedApplication] keyWindow].height - 89;
     view.width = [[UIApplication sharedApplication] keyWindow].width;
@@ -144,6 +154,12 @@ static float allPrice = 0;
 - (void)page{
     if (allPrice != 0) {   //如果选择了商品
         ZROrderViewController *orderVc = [[ZROrderViewController alloc] init];
+        for (int i = 0; i < self.arrayModel.count; i++) {
+            ZRGoods *model = self.arrayModel[i];
+            if (model.isSel) {
+                [orderVc.array addObject:model];
+            }
+        }
         [self.navigationController pushViewController:orderVc animated:YES];
     }
 }
