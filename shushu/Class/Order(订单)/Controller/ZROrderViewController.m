@@ -23,6 +23,7 @@
     self.navigationItem.title = @"确认订单";
     [self.navigationController.view.subviews lastObject].hidden = YES;
     self.tableView.separatorStyle = NO;
+    
 }
 
 

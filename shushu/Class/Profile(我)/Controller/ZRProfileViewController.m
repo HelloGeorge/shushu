@@ -9,8 +9,9 @@
 #import "ZRProfileViewController.h"
 #import "ZRPersonalTableViewCell.h"
 #import "ZRGroupHeaderView.h"
+#import "ZRStoreViewController.h"
 
-@interface ZRProfileViewController ()
+@interface ZRProfileViewController ()<ZRPersonalTableViewCellDelegate>
 
 @end
 
@@ -54,6 +55,7 @@
     if (indexPath.section == 0) {
         //加载xib
         cell = [ZRPersonalTableViewCell personalInfo];
+        cell.delegate = self;
         //加载plist文件
         
         //1.获取plist文件的路径，放入path的变量中
@@ -129,6 +131,13 @@
     }else{
         return 60;
     }
+}
+
+#pragma mark - ZRPersonalTableViewCell的代理方法
+
+- (void)goStoreClick:(ZRPersonalTableViewCell *)cell{
+    ZRStoreViewController *storeVc = [[ZRStoreViewController alloc] init];
+    [self.navigationController pushViewController:storeVc animated:YES];
 }
 
 

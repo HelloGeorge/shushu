@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZRPersonalTableViewCell;
+@protocol ZRPersonalTableViewCellDelegate <NSObject>
+
+- (void)goStoreClick:(ZRPersonalTableViewCell *)cell;
+
+@end
+
 @interface ZRPersonalTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *userIcon;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
@@ -18,6 +25,9 @@
 - (IBAction)qianDao:(id)sender;
 
 @property (nonatomic,strong) NSArray *person;
+
+//代理是弱指针
+@property (nonatomic,weak) id<ZRPersonalTableViewCellDelegate> delegate;
 
 
 + (instancetype)personalInfo;

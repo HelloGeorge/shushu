@@ -35,8 +35,13 @@
     _userExp.text = p[@"userExp"];
 }
 
-
+//进入店铺
 - (IBAction)goStore:(id)sender {
+    //只有当代理实现了这个方式时才调用
+    if ([self.delegate respondsToSelector:@selector(goStoreClick:)]) {
+        //代理调用这个方法
+        [self.delegate goStoreClick:self];
+    }
 }
 
 - (IBAction)qianDao:(id)sender {

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18D612BE1D1D1BF0008E94D0"
-               BuildableName = "shushu.app"
-               BlueprintName = "shushu"
+               BuildableName = "&#xb7;&#xff0c;.app"
+               BlueprintName = "&#xb7;&#xff0c;"
                ReferencedContainer = "container:shushu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18D612BE1D1D1BF0008E94D0"
-            BuildableName = "shushu.app"
-            BlueprintName = "shushu"
+            BuildableName = "&#xb7;&#xff0c;.app"
+            BlueprintName = "&#xb7;&#xff0c;"
             ReferencedContainer = "container:shushu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18D612BE1D1D1BF0008E94D0"
-            BuildableName = "shushu.app"
-            BlueprintName = "shushu"
+            BuildableName = "&#xb7;&#xff0c;.app"
+            BlueprintName = "&#xb7;&#xff0c;"
             ReferencedContainer = "container:shushu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18D612BE1D1D1BF0008E94D0"
-            BuildableName = "shushu.app"
-            BlueprintName = "shushu"
+            BuildableName = "&#xb7;&#xff0c;.app"
+            BlueprintName = "&#xb7;&#xff0c;"
             ReferencedContainer = "container:shushu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
