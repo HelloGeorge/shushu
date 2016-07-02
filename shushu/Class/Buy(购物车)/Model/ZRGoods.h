@@ -10,12 +10,14 @@
 
 @interface ZRGoods : NSObject
 
-@property (nonatomic,assign) NSString *goodsDesc;
-@property (nonatomic,assign) NSString *goodsKind;
-@property (nonatomic,assign) float goodsPrice;
-@property (nonatomic,assign) int goodsCount;
-@property (nonatomic,assign) NSString *goodsImg;
-@property (nonatomic,assign) NSString *store;
+@property (nonatomic,copy) NSString *bookPhotoPath;
+@property (nonatomic,copy) NSString *shopName;
+@property (nonatomic,assign) int productId;
+@property (nonatomic,assign) int productCount;
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,assign) float sellingPrice;
+@property (nonatomic,assign) int shopId;
+@property (nonatomic,assign) int ID;
 @property (nonatomic,assign) BOOL isSel;
 
 + (instancetype)goodsWithDic:(NSDictionary *)dic;

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZRBookInfo;
 
 @interface ZRInfoViewController : UITableViewController
+
+@property (nonatomic,strong) ZRBookInfo *model;
 
 @end

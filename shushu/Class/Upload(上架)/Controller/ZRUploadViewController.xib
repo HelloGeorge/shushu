@@ -78,15 +78,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFQ-PU-f4n">
                     <rect key="frame" x="187" y="207" width="180" height="185"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHw-Uc-66b">
-                    <rect key="frame" x="93" y="458" width="188" height="42"/>
-                    <state key="normal" title="上传" backgroundImage="btn-base">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="upBook:" destination="-1" eventType="touchUpInside" id="mcS-iP-Nvf"/>
-                    </connections>
-                </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laS-bb-kyf">
                     <rect key="frame" x="56" y="170" width="311" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -129,6 +120,25 @@
                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sb-Ay-DWo">
                     <rect key="frame" x="0.0" y="508" width="375" height="151"/>
                 </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE1-OU-srp">
+                    <rect key="frame" x="23" y="452" width="143" height="42"/>
+                    <state key="normal" title="选择图片" backgroundImage="btn-base">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="chooseImage:" destination="-1" eventType="touchUpInside" id="EL4-q7-UPL"/>
+                        <action selector="upBook:" destination="-1" eventType="touchUpInside" id="AXW-HC-12F"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHw-Uc-66b">
+                    <rect key="frame" x="224" y="452" width="143" height="42"/>
+                    <state key="normal" title="上传" backgroundImage="btn-base">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="upBook:" destination="-1" eventType="touchUpInside" id="mcS-iP-Nvf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

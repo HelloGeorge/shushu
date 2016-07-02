@@ -8,6 +8,7 @@
 
 #import "ZRBuyViewCell.h"
 #import "ZRBuyViewController.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface ZRBuyViewCell ()
@@ -30,15 +31,10 @@
 
 - (void)setGoods:(ZRGoods *)goods{
     _goods = goods;
-    //取得字典
-//    NSDictionary *g = _goods[0];
-//    [_store setTitle:[NSString stringWithFormat:@"%@→",g[@"store"]] forState:UIControlStateNormal];
-    _goodsImg.image = [UIImage imageNamed:_goods.goodsImg];
-    _goodsDesc.text = _goods.goodsDesc;
-    _goodsKind.text = [NSString stringWithFormat:@"颜色分类:%@",_goods.goodsKind];
-    _goodsPrice.text = [NSString stringWithFormat:@"%.1f",_goods.goodsPrice];
-    _goodsCount.text = [NSString stringWithFormat:@"×%d",_goods.goodsCount];
-    
+    [_goodsImg sd_setImageWithURL:[NSURL URLWithString:_goods.bookPhotoPath] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    _goodsDesc.text = _goods.title;
+    _goodsCount.text = [NSString stringWithFormat:@"×%d",_goods.productCount];
+    _goodsPrice.text = [NSString stringWithFormat:@"%.1f",_goods.sellingPrice];
 }
 
 

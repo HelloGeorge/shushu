@@ -31,5 +31,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *bookCount;
 //上传信息
 - (IBAction)upBook:(id)sender;
+- (IBAction)chooseImage:(id)sender;
 
 @end

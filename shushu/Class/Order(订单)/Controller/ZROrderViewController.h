@@ -10,7 +10,6 @@
 
 @interface ZROrderViewController : UITableViewController
 
-//存放订单里面的数据模型
-@property (nonatomic,strong) NSMutableArray *array;
+
 
 @end

@@ -7,11 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZRGoodInfo;
 
 @interface ZROrderViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *bookName;
+@property (weak, nonatomic) IBOutlet UILabel *sellPrice;
+@property (weak, nonatomic) IBOutlet UILabel *bookCount;
+@property (weak, nonatomic) IBOutlet UILabel *shopName;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *bookImg;
 + (instancetype)orderViewCell;
 
 + (instancetype)addressViewCell;
+
+@property (nonatomic,strong) ZRGoodInfo *model;
 
 @end

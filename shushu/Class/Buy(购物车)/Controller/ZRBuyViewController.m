@@ -12,6 +12,7 @@
 #import "ZRGoods.h"
 #import "UIView+ZRExtension.h"
 #import "ZROrderViewController.h"
+#import "AFNetworking.h"
 
 @interface ZRBuyViewController ()<ZRBuyViewCellDelegate>
 //存放商品信息模型的可变数组
@@ -26,8 +27,6 @@
 @property (nonatomic,weak) UIView *botView;
 
 
-
-
 @end
 
 @implementation ZRBuyViewController
@@ -38,17 +37,7 @@ static float allPrice = 0;
 //懒加载
 - (NSArray *)arrayModel{
     if (_arrayModel == nil) {
-        //加载plist文件
-        //获取文件的地址
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"goods.plist" ofType:nil];
-        NSMutableArray *array = [NSMutableArray array];
-        _arrayModel = [NSMutableArray arrayWithContentsOfFile:path];
-        for (NSDictionary *dic in _arrayModel) {
-            //将字典转换成模型对象
-            ZRGoods *model = [ZRGoods goodsWithDic:dic];
-            [array addObject:model];
-        }
-        _arrayModel = array;
+        self.arrayModel = [[NSMutableArray alloc] init];
     }
     return _arrayModel;
 }
@@ -63,16 +52,41 @@ static float allPrice = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //请求数据
+    [self loadBuyBookInfo];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(selectThing)];
     
-    self.tableView.rowHeight = 100;
     self.tableView.separatorStyle = NO;
-    self.tableView.sectionHeaderHeight = 40;
     //设置tableView的背景色为灰色
 //    self.tableView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
     
     //创建一个底部的显示总价格的view
     [self createBotView];
+}
+
+- (void)loadBuyBookInfo{
+    //1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    //2.拼接参数
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"userId"] = @"3";
+    
+    //3.发送请求
+    [mgr POST:@"http://www.91shushu.com/app/product/getCartMsg" parameters:param success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        //请求成功来到这里
+        NSArray *array = responseObject[@"result"];
+        for (NSDictionary *dic in array) {
+            ZRGoods *model = [ZRGoods goodsWithDic:dic];
+            [self.arrayModel addObject:model];
+        }
+        [self.tableView reloadData];
+//        NSLog(@"%@",responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //请求失败来到这里
+        NSLog(@"请求失败");
+    }];
 }
 
 //创建一个底部的显示总价格的view
@@ -153,13 +167,23 @@ static float allPrice = 0;
 //结算
 - (void)page{
     if (allPrice != 0) {   //如果选择了商品
-        ZROrderViewController *orderVc = [[ZROrderViewController alloc] init];
+        
+        //取得沙盒的路径
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *fileName = [path stringByAppendingString:@"/buyThings.plist"];
+        NSMutableArray *array = [NSMutableArray array];
         for (int i = 0; i < self.arrayModel.count; i++) {
             ZRGoods *model = self.arrayModel[i];
             if (model.isSel) {
-                [orderVc.array addObject:model];
+                NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                [dic setValue:[NSString stringWithFormat:@"%d",model.ID] forKey:@"ID"];
+                [dic setValue:[NSString stringWithFormat:@"%d",model.productCount] forKey:@"productCount"];
+                [dic setValue:[NSString stringWithFormat:@"%d",model.shopId] forKey:@"shopId"];
+                [array addObject:dic];
             }
         }
+        [array writeToFile:fileName atomically:YES];
+        ZROrderViewController *orderVc = [[ZROrderViewController alloc] init];
         [self.navigationController pushViewController:orderVc animated:YES];
     }
 }
@@ -204,11 +228,19 @@ static float allPrice = 0;
 //返回自定义的每一行的headerView
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     ZRGoods *good = self.arrayModel[section];
-    return [ZRBuyHeaderView buyHeader:tableView storeText:good.store section:section];
+    return [ZRBuyHeaderView buyHeader:tableView storeText:good.shopName section:section];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"  ";
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
 }
 
 #pragma mark - ZRBuyViewCell的代理方法
@@ -222,10 +254,10 @@ static float allPrice = 0;
 //实现选择商品后设置底部view的方法
 - (void)chooseBtnClick:(ZRBuyViewCell *)cell{
     if (cell.goods.isSel) {   //说明选中当前商品，总价值增加
-        allPrice += cell.goods.goodsPrice;
+        allPrice += cell.goods.sellingPrice;
         self.botLbl.text = [NSString stringWithFormat:@"总计:%.1f",allPrice];
     }else{   //说明当前商品没有被选中
-        allPrice -= cell.goods.goodsPrice;
+        allPrice -= cell.goods.sellingPrice;
         self.botLbl.text = [NSString stringWithFormat:@"总计:%.1f",allPrice];
     }
     if (allPrice != 0) {  //总价值不为0

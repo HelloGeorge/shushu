@@ -7,6 +7,8 @@
 //
 
 #import "ZROrderViewCell.h"
+#import "ZRGoodInfo.h"
+#import "UIImageView+WebCache.h"
 
 @implementation ZROrderViewCell
 
@@ -28,4 +30,13 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"ZROrderViewCell" owner:nil options:nil] lastObject];
 }
 
+- (void)setModel:(ZRGoodInfo *)model{
+    _model = model;
+//    NSLog(@"%@",_model.bookPhotoPath);
+    [self.bookImg sd_setImageWithURL:[NSURL URLWithString:_model.bookPhotoPath] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    self.bookName.text = _model.title;
+    self.sellPrice.text = [NSString stringWithFormat:@"%.1f",_model.sellingPrice];
+    self.shopName.text = _model.shopName;
+    self.bookCount.text = [NSString stringWithFormat:@"×%d",_model.productCount];
+}
 @end

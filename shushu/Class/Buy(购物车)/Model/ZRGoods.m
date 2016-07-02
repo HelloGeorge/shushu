@@ -12,12 +12,14 @@
 
 + (instancetype)goodsWithDic:(NSDictionary *)dic{
     ZRGoods *model = [[ZRGoods alloc] init];
-    model.goodsImg = dic[@"goodsImg"];
-    model.goodsDesc = dic[@"goodsDesc"];
-    model.goodsKind = dic[@"goodsKind"];
-    model.goodsPrice = [dic[@"goodsSell"] floatValue];
-    model.goodsCount = [dic[@"goodsCount"] intValue];
-    model.store = dic[@"store"];
+    model.bookPhotoPath = dic[@"bookPhotoPath"];
+    model.shopName = dic[@"shopName"];
+    model.productId = [dic[@"productId"] intValue];
+    model.productCount = [dic[@"productCount"] intValue];
+    model.title = dic[@"title"];
+    model.sellingPrice = [dic[@"sellingPrice"] floatValue];
+    model.shopId = [dic[@"shopId"] intValue];
+    model.ID = [dic[@"id"] intValue];
     //初始为未选中状态
     model.isSel = NO;
     return model;

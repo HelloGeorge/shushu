@@ -261,4 +261,7 @@
 - (IBAction)upBook:(id)sender {
     
 }
+
+- (IBAction)chooseImage:(id)sender {
+}
 @end

@@ -12,6 +12,9 @@
 #import "ZRTableViewCell.h"
 #import "ZRInfoViewController.h"
 #import "ZRHomeViewCell.h"
+#import "AFNetworking.h"
+#import "ZRBookInfo.h"
+#import "MJExtension.h"
 #define ZRBanCount 3
 
 @interface ZRHomeViewController ()<UIScrollViewDelegate>
@@ -19,10 +22,20 @@
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,weak) UIScrollView *scrollView;
 
+@property (nonatomic,strong) NSArray *arrayModel;
 
 @end
 
 @implementation ZRHomeViewController
+
+//懒加载数据
+//- (NSMutableArray *)arrayModel{
+//    if (_arrayModel == nil) {
+//        self.arrayModel = [NSMutableArray array];
+//    }
+//    return _arrayModel;
+//}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +66,36 @@
     
     //去掉tableView之间的分组线
     self.tableView.separatorStyle = NO;
+    
+    //加载首页书籍信息
+    [self loadBookInfo];
 }
+
+//加载首页书籍信息
+- (void)loadBookInfo{
+    
+    //1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    //2.拼接参数
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"school"] = @"东油";
+    
+    //3.发送请求
+    [mgr POST:@"http://www.91shushu.com/app/product/getNewBook" parameters:param success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        //请求成功之后来到这里
+        NSArray *array = [ZRBookInfo objectArrayWithKeyValuesArray:responseObject[@"result"]];
+//        NSArray *array = responseObject[@"result"];
+        self.arrayModel = array;
+        //请求完数据后再刷新一次界面
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"请求失败");
+        //请求失败之后来到这里
+    }];
+}
+
+
 
 //设置图片轮播器
 - (void)imgScroll{
@@ -150,8 +192,8 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 12;
+//    NSLog(@"%d",self.arrayModel.count);
+    return self.arrayModel.count + 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -163,6 +205,8 @@
         return cell;
     }else{
         ZRHomeViewCell *cell = [ZRHomeViewCell homeViewCell];
+//        cell.dic = self.arrayModel[indexPath.row - 2];
+        cell.bookInfo = self.arrayModel[indexPath.row - 2];
         return cell;
     }
 }
@@ -180,6 +224,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ZRInfoViewController *vc = [[ZRInfoViewController alloc] init];
+    vc.model = self.arrayModel[indexPath.row - 2];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
