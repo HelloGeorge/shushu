@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZRUser;
 
 @class ZRPersonalTableViewCell;
 @protocol ZRPersonalTableViewCellDelegate <NSObject>
@@ -24,7 +25,7 @@
 - (IBAction)goStore:(id)sender;
 - (IBAction)qianDao:(id)sender;
 
-@property (nonatomic,strong) NSArray *person;
+@property (nonatomic,strong) ZRUser *user;
 
 //代理是弱指针
 @property (nonatomic,weak) id<ZRPersonalTableViewCellDelegate> delegate;

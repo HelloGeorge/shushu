@@ -13,6 +13,8 @@
 #import "UIView+ZRExtension.h"
 #import "ZROrderViewController.h"
 #import "AFNetworking.h"
+#import "ZRUser.h"
+#import "ZRUserTool.h"
 
 @interface ZRBuyViewController ()<ZRBuyViewCellDelegate>
 //存放商品信息模型的可变数组
@@ -47,6 +49,7 @@ static float allPrice = 0;
     if (allPrice != 0) {
         self.botView.hidden = NO;
     }
+    
 }
 
 - (void)viewDidLoad {
@@ -69,9 +72,11 @@ static float allPrice = 0;
     //1.请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
+    //获取用户模型
+    ZRUser *model = [ZRUserTool user];
     //2.拼接参数
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"userId"] = @"3";
+    param[@"userId"] = [NSString stringWithFormat:@"%d",model.ID];
     
     //3.发送请求
     [mgr POST:@"http://www.91shushu.com/app/product/getCartMsg" parameters:param success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {

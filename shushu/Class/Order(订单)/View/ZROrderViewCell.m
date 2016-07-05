@@ -10,6 +10,7 @@
 #import "ZRGoodInfo.h"
 #import "UIImageView+WebCache.h"
 
+
 @implementation ZROrderViewCell
 
 - (void)awakeFromNib {
@@ -26,9 +27,6 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"ZROrderViewCell" owner:nil options:nil] firstObject];
 }
 
-+ (instancetype)addressViewCell{
-    return [[[NSBundle mainBundle] loadNibNamed:@"ZROrderViewCell" owner:nil options:nil] lastObject];
-}
 
 - (void)setModel:(ZRGoodInfo *)model{
     _model = model;
@@ -39,4 +37,18 @@
     self.shopName.text = _model.shopName;
     self.bookCount.text = [NSString stringWithFormat:@"×%d",_model.productCount];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

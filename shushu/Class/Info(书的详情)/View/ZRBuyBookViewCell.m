@@ -11,6 +11,9 @@
 #import "ZRBookAllInfo.h"
 #import "ZRBookTip.h"
 #import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+#import "ZRUserTool.h"
+#import "ZRUser.h"
 
 @interface ZRBuyBookViewCell ()
 
@@ -83,6 +86,29 @@
 //        [array addObject:dic];
 //        [array writeToFile:fileName atomically:YES];
 //    }
+    
+    //将要购买的书籍信息发送到服务器端的购物车
+    //1.请求的管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    
+    //获取用户的信息
+    ZRUser *model = [ZRUserTool user];
+    //2.拼接参数
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"productId"] = [NSString stringWithFormat:@"%d",self.bookId];
+    param[@"userId"] = [NSString stringWithFormat:@"%d",model.ID];
+    param[@"productCount"] = self.countLbl.text;
+    
+    //3.请求
+    [mgr POST:@"http://www.91shushu.com/app/product/joinCart" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //请求成功返回这里
+        NSLog(@"成功加入购物车");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //请求失败返回这里
+        NSLog(@"请求失败");
+    }];
+    
 }
 
 + (instancetype)buyBookCell{

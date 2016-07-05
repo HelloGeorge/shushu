@@ -19,7 +19,7 @@
 #define VIEW_WIDTH [UIScreen mainScreen].bounds.size.width
 #define VIEW_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ZRUploadViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface ZRUploadViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 - (IBAction)scanfBook:(id)sender;
 
 //输入输出的中间桥梁
@@ -259,9 +259,89 @@
 }
 //上传数据和文件
 - (IBAction)upBook:(id)sender {
+    //1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    //2.拼接参数
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"ISBN"] = self.isbnLbl.text;
+    param[@"bookPrice"] = self.nowPrice.text;
+    param[@"userId"] = @"3";
+    param[@"bookCount"] = self.bookCount.text;
+    param[@"title"] = self.bookName.text;
+    param[@"price"] = self.oriPrice.text;
+    param[@"categoryName"] = self.kingB.titleLabel.text;
+    
+    //3.发送请求
+    [mgr POST:@"http://www.91shushu.com/product/upProduct" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //请求成功来到这里
+        NSLog(@"请求成功");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //请求失败来到这里
+        NSLog(@"%@",error);
+    }];
+}
+
+//点击按钮选择拍照
+- (IBAction)chooseImage:(id)sender {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择照片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"手机相册", nil];
+    //最好这样写，因为可能显示其他的控制器当前控制器的view就取消了，这时程序就会出错
+    [sheet showInView:self.view.window];
+}
+
+
+#pragma mark - UIActionSheet的代理方法
+//用户选择选取照片之后执行的方法
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    //判断用户点击了哪个按钮
+    //调用手机的照相机的控制器
+    UIImagePickerController *pc = [[UIImagePickerController alloc] init];
+    //设置手机相机控制器的代理
+    pc.delegate = self;
+    
+    switch (buttonIndex) {
+        case 0:{   //手机拍照
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                return;
+            }
+            //设置照片的来源是手机拍照
+            pc.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+            
+            break;
+        case 1:{   //手机相册
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+                return;
+            }
+            //设置照片的来源是手机相册
+            pc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+            
+            break;
+            
+        default:
+            break;
+    }
+    [self presentViewController:pc animated:YES completion:nil];
     
 }
 
-- (IBAction)chooseImage:(id)sender {
+#pragma mark - UIImagePickerControllerDelegate的代理方法
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    
+    //销毁控制器
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    self.imgBook.image = info[UIImagePickerControllerOriginalImage];
 }
+
+
+
+
+
+
+
+
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "ZRPersonalTableViewCell.h"
+#import "ZRUser.h"
+#import "UIImageView+WebCache.h"
 
 @interface ZRPersonalTableViewCell ()
 
@@ -25,15 +27,20 @@
     // Configure the view for the selected state
 }
 
-- (void)setPerson:(NSArray *)person{
-    _person = person;
-    NSDictionary *p = _person[0];
-    _userIcon.image = [UIImage imageNamed:p[@"userImg"]];
-    _userName.text = p[@"userName"];
-    _userRank.text = p[@"userRank"];
-    _userShu.text = p[@"userShu"];
-    _userExp.text = p[@"userExp"];
+- (void)setUser:(ZRUser *)user{
+    _user = user;
+    if (_user.name) {
+        [self.userIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.91shushu.com/resource/h5/upload/head/%@",_user.photo]] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    }else{
+        [self.userIcon sd_setImageWithURL:[NSURL URLWithString:@"http://www.91shushu.com/resource/h5/upload/head/u_img.jpg"] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    }
+    self.userName.text = _user.name;
+    self.userRank.text = @"铜牌会员";
+    self.userExp.text = @"110";
+    self.userShu.text = @"80";
 }
+
+
 
 //进入店铺
 - (IBAction)goStore:(id)sender {

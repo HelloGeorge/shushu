@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZRUser : NSObject
+@interface ZRUser : NSObject<NSCoding>
 
 //所在学校
 @property (nonatomic,copy) NSString *college;
@@ -32,5 +32,9 @@
 @property (nonatomic,assign) int roleId;
 //电话号码
 @property (nonatomic,copy) NSString *phoneNumber;
+//头像
+@property (nonatomic,copy) NSString *photo;
+
++ (instancetype)accountWithDic:(NSDictionary *)dic;
 
 @end

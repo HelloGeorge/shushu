@@ -18,8 +18,10 @@
 		182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */; };
 		182857EE1D1E62870050DFCA /* ZRPersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */; };
 		182857EF1D1E62870050DFCA /* ZRPersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */; };
-		182857F11D1E6C3A0050DFCA /* person.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182857F01D1E6C3A0050DFCA /* person.plist */; };
 		182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */; };
+		183725351D2B6D6C00030FA5 /* ZRUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 183725341D2B6D6C00030FA5 /* ZRUserTool.m */; };
+		183725391D2B9F9F00030FA5 /* ZRAddressViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183725371D2B9F9F00030FA5 /* ZRAddressViewCell.m */; };
+		1837253A1D2B9F9F00030FA5 /* ZRAddressViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183725381D2B9F9F00030FA5 /* ZRAddressViewCell.xib */; };
 		187AB3E91D26086600C90F31 /* ZRStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AB3E81D26086600C90F31 /* ZRStoreViewController.m */; };
 		187AB3ED1D2608CA00C90F31 /* ZRStoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AB3EB1D2608CA00C90F31 /* ZRStoreViewCell.m */; };
 		187AB3EE1D2608CA00C90F31 /* ZRStoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187AB3EC1D2608CA00C90F31 /* ZRStoreViewCell.xib */; };
@@ -31,6 +33,8 @@
 		18858E1F1D2368770014AC2D /* ZROrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */; };
 		188DC6F01D25298D00AADE65 /* ZRHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188DC6EE1D25298D00AADE65 /* ZRHomeViewCell.m */; };
 		188DC6F11D25298D00AADE65 /* ZRHomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188DC6EF1D25298D00AADE65 /* ZRHomeViewCell.xib */; };
+		18C6E1FF1D289C6C005D3FFE /* ZRPayViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6E1FD1D289C6C005D3FFE /* ZRPayViewCell.m */; };
+		18C6E2001D289C6C005D3FFE /* ZRPayViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C6E1FE1D289C6C005D3FFE /* ZRPayViewCell.xib */; };
 		18C8CBCC1D265090007F419E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8CBBA1D265090007F419E /* AFHTTPRequestOperation.m */; };
 		18C8CBCD1D265090007F419E /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8CBBC1D265090007F419E /* AFHTTPRequestOperationManager.m */; };
 		18C8CBCE1D265090007F419E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8CBBE1D265090007F419E /* AFHTTPSessionManager.m */; };
@@ -88,7 +92,6 @@
 		18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */; };
 		18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */; };
 		18F1586B1D1F673A00DC6C43 /* ZRBuyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */; };
-		18F1586E1D1FAB1200DC6C43 /* goods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F1586D1D1FAB1200DC6C43 /* goods.plist */; };
 		18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */; };
 		18F158731D1FE0FC00DC6C43 /* ZRBuyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */; };
 /* End PBXBuildFile section */
@@ -111,9 +114,13 @@
 		182857EB1D1E62870050DFCA /* ZRPersonalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPersonalTableViewCell.h; sourceTree = "<group>"; };
 		182857EC1D1E62870050DFCA /* ZRPersonalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPersonalTableViewCell.m; sourceTree = "<group>"; };
 		182857ED1D1E62870050DFCA /* ZRPersonalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRPersonalTableViewCell.xib; sourceTree = "<group>"; };
-		182857F01D1E6C3A0050DFCA /* person.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = person.plist; sourceTree = "<group>"; };
 		182857F51D1E98500050DFCA /* ZRGroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGroupHeaderView.h; sourceTree = "<group>"; };
 		182857F61D1E98500050DFCA /* ZRGroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGroupHeaderView.m; sourceTree = "<group>"; };
+		183725331D2B6D6C00030FA5 /* ZRUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRUserTool.h; sourceTree = "<group>"; };
+		183725341D2B6D6C00030FA5 /* ZRUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRUserTool.m; sourceTree = "<group>"; };
+		183725361D2B9F9F00030FA5 /* ZRAddressViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAddressViewCell.h; sourceTree = "<group>"; };
+		183725371D2B9F9F00030FA5 /* ZRAddressViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAddressViewCell.m; sourceTree = "<group>"; };
+		183725381D2B9F9F00030FA5 /* ZRAddressViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRAddressViewCell.xib; sourceTree = "<group>"; };
 		187AB3E71D26086600C90F31 /* ZRStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStoreViewController.h; sourceTree = "<group>"; };
 		187AB3E81D26086600C90F31 /* ZRStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStoreViewController.m; sourceTree = "<group>"; };
 		187AB3EA1D2608CA00C90F31 /* ZRStoreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStoreViewCell.h; sourceTree = "<group>"; };
@@ -131,6 +138,9 @@
 		188DC6ED1D25298D00AADE65 /* ZRHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRHomeViewCell.h; sourceTree = "<group>"; };
 		188DC6EE1D25298D00AADE65 /* ZRHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRHomeViewCell.m; sourceTree = "<group>"; };
 		188DC6EF1D25298D00AADE65 /* ZRHomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRHomeViewCell.xib; sourceTree = "<group>"; };
+		18C6E1FC1D289C6C005D3FFE /* ZRPayViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPayViewCell.h; sourceTree = "<group>"; };
+		18C6E1FD1D289C6C005D3FFE /* ZRPayViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPayViewCell.m; sourceTree = "<group>"; };
+		18C6E1FE1D289C6C005D3FFE /* ZRPayViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRPayViewCell.xib; sourceTree = "<group>"; };
 		18C8CBB91D265090007F419E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		18C8CBBA1D265090007F419E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		18C8CBBB1D265090007F419E /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -246,7 +256,6 @@
 		18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSearchBar.m; sourceTree = "<group>"; };
 		18F158681D1F673A00DC6C43 /* ZRBuyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyViewCell.h; sourceTree = "<group>"; };
 		18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyViewCell.m; sourceTree = "<group>"; };
-		18F1586D1D1FAB1200DC6C43 /* goods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = goods.plist; sourceTree = "<group>"; };
 		18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBuyViewCell.xib; sourceTree = "<group>"; };
 		18F158711D1FE0FC00DC6C43 /* ZRBuyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyHeaderView.h; sourceTree = "<group>"; };
 		18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyHeaderView.m; sourceTree = "<group>"; };
@@ -308,6 +317,15 @@
 				1827BEB31D23A50F00B1440B /* ZRJudgeViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		183725321D2B6D4900030FA5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				183725331D2B6D6C00030FA5 /* ZRUserTool.h */,
+				183725341D2B6D6C00030FA5 /* ZRUserTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		187AB3E31D26083400C90F31 /* Store(店铺) */ = {
@@ -414,6 +432,12 @@
 				18858E1B1D2368770014AC2D /* ZROrderViewCell.h */,
 				18858E1C1D2368770014AC2D /* ZROrderViewCell.m */,
 				18858E1D1D2368770014AC2D /* ZROrderViewCell.xib */,
+				18C6E1FC1D289C6C005D3FFE /* ZRPayViewCell.h */,
+				18C6E1FD1D289C6C005D3FFE /* ZRPayViewCell.m */,
+				18C6E1FE1D289C6C005D3FFE /* ZRPayViewCell.xib */,
+				183725361D2B9F9F00030FA5 /* ZRAddressViewCell.h */,
+				183725371D2B9F9F00030FA5 /* ZRAddressViewCell.m */,
+				183725381D2B9F9F00030FA5 /* ZRAddressViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,6 +541,7 @@
 		18D3D2251D27A058003D5AA2 /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
+				183725321D2B6D4900030FA5 /* Tool */,
 				18D3D2261D27A058003D5AA2 /* Controller */,
 				18D3D2271D27A058003D5AA2 /* Model */,
 				18D3D2281D27A058003D5AA2 /* View */,
@@ -582,8 +607,6 @@
 				18D612D01D1D1BF0008E94D0 /* LaunchScreen.storyboard */,
 				18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */,
 				18D612D31D1D1BF0008E94D0 /* Info.plist */,
-				182857F01D1E6C3A0050DFCA /* person.plist */,
-				18F1586D1D1FAB1200DC6C43 /* goods.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -887,11 +910,11 @@
 			files = (
 				182857EA1D1E255A0050DFCA /* ZRTableViewCell.xib in Resources */,
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
-				182857F11D1E6C3A0050DFCA /* person.plist in Resources */,
+				18C6E2001D289C6C005D3FFE /* ZRPayViewCell.xib in Resources */,
 				1827BEAB1D23A3ED00B1440B /* ZRBuyBookViewCell.xib in Resources */,
 				18D3D22D1D27A08A003D5AA2 /* ZRLoginView.xib in Resources */,
 				1827BEB01D23A42A00B1440B /* ZRBookIntroViewCell.xib in Resources */,
-				18F1586E1D1FAB1200DC6C43 /* goods.plist in Resources */,
+				1837253A1D2B9F9F00030FA5 /* ZRAddressViewCell.xib in Resources */,
 				18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */,
 				18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */,
 				187AB3EE1D2608CA00C90F31 /* ZRStoreViewCell.xib in Resources */,
@@ -922,6 +945,7 @@
 				18D612E81D1D1EBD008E94D0 /* AppDelegate.m in Sources */,
 				18C8CC001D26583F007F419E /* UIButton+WebCache.m in Sources */,
 				18C8CBCE1D265090007F419E /* AFHTTPSessionManager.m in Sources */,
+				18C6E1FF1D289C6C005D3FFE /* ZRPayViewCell.m in Sources */,
 				18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */,
 				18C8CBFE1D26583F007F419E /* SDWebImageManager.m in Sources */,
 				18D613221D1D54B8008E94D0 /* ZRTabbarController.m in Sources */,
@@ -937,8 +961,10 @@
 				18C8CC031D26583F007F419E /* UIImage+WebP.m in Sources */,
 				18D6131F1D1D4F75008E94D0 /* UIView+ZRExtension.m in Sources */,
 				18D3D2161D277760003D5AA2 /* MJFoundation.m in Sources */,
+				183725351D2B6D6C00030FA5 /* ZRUserTool.m in Sources */,
 				18D3D21C1D277760003D5AA2 /* NSObject+MJCoding.m in Sources */,
 				18C8CBFD1D26583F007F419E /* SDWebImageDownloaderOperation.m in Sources */,
+				183725391D2B9F9F00030FA5 /* ZRAddressViewCell.m in Sources */,
 				18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */,
 				18C8CBF71D26583F007F419E /* MKAnnotationView+WebCache.m in Sources */,
 				182857F71D1E98500050DFCA /* ZRGroupHeaderView.m in Sources */,
