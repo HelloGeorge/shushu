@@ -11,12 +11,25 @@
 #import "ZRGroupHeaderView.h"
 #import "ZRStoreViewController.h"
 #import "ZRUserTool.h"
+#import "ZRUser.h"
+#import "ZRLoginView.h"
+#import "ZRTabbarController.h"
 
 @interface ZRProfileViewController ()<ZRPersonalTableViewCellDelegate>
 
 @end
 
 @implementation ZRProfileViewController
+
+//视图将要显示的时候执行的代码
+- (void)viewWillAppear:(BOOL)animated{
+    ZRUser *user = [ZRUserTool user];
+    if (!user) {      //说明用户没有登录
+        ZRLoginView *view = [[ZRLoginView alloc] init];
+        [self presentViewController:view animated:YES completion:nil];
+        
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +40,13 @@
 }
 
 - (void)back{
-    NSLog(@"退出登录");
+//    NSLog(@"退出登录");
+    NSString * file = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.archive"];
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    [mgr removeItemAtPath:file error:nil];
+    ZRTabbarController *tabbarVc = [[ZRTabbarController alloc] init];
+    [self presentViewController:tabbarVc animated:YES completion:nil];
+    
 }
 #pragma mark - Table view data source
 

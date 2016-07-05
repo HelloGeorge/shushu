@@ -22,6 +22,7 @@
 		183725351D2B6D6C00030FA5 /* ZRUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 183725341D2B6D6C00030FA5 /* ZRUserTool.m */; };
 		183725391D2B9F9F00030FA5 /* ZRAddressViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183725371D2B9F9F00030FA5 /* ZRAddressViewCell.m */; };
 		1837253A1D2B9F9F00030FA5 /* ZRAddressViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183725381D2B9F9F00030FA5 /* ZRAddressViewCell.xib */; };
+		186778B21D2BD945006476F3 /* ZRLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186778B11D2BD945006476F3 /* ZRLoginView.xib */; };
 		187AB3E91D26086600C90F31 /* ZRStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AB3E81D26086600C90F31 /* ZRStoreViewController.m */; };
 		187AB3ED1D2608CA00C90F31 /* ZRStoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AB3EB1D2608CA00C90F31 /* ZRStoreViewCell.m */; };
 		187AB3EE1D2608CA00C90F31 /* ZRStoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187AB3EC1D2608CA00C90F31 /* ZRStoreViewCell.xib */; };
@@ -76,7 +77,6 @@
 		18D3D2211D2786B2003D5AA2 /* ZRBookAllInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D2201D2786B2003D5AA2 /* ZRBookAllInfo.m */; };
 		18D3D2241D278ABB003D5AA2 /* ZRBookTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D2231D278ABB003D5AA2 /* ZRBookTip.m */; };
 		18D3D22C1D27A08A003D5AA2 /* ZRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D22A1D27A08A003D5AA2 /* ZRLoginView.m */; };
-		18D3D22D1D27A08A003D5AA2 /* ZRLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D3D22B1D27A08A003D5AA2 /* ZRLoginView.xib */; };
 		18D3D2301D27A5E3003D5AA2 /* ZRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D22F1D27A5E3003D5AA2 /* ZRUser.m */; };
 		18D3D2331D27EAC5003D5AA2 /* ZRGoodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D2321D27EAC5003D5AA2 /* ZRGoodInfo.m */; };
 		18D612CF1D1D1BF0008E94D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612CE1D1D1BF0008E94D0 /* Assets.xcassets */; };
@@ -121,6 +121,7 @@
 		183725361D2B9F9F00030FA5 /* ZRAddressViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAddressViewCell.h; sourceTree = "<group>"; };
 		183725371D2B9F9F00030FA5 /* ZRAddressViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAddressViewCell.m; sourceTree = "<group>"; };
 		183725381D2B9F9F00030FA5 /* ZRAddressViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRAddressViewCell.xib; sourceTree = "<group>"; };
+		186778B11D2BD945006476F3 /* ZRLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRLoginView.xib; sourceTree = "<group>"; };
 		187AB3E71D26086600C90F31 /* ZRStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStoreViewController.h; sourceTree = "<group>"; };
 		187AB3E81D26086600C90F31 /* ZRStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStoreViewController.m; sourceTree = "<group>"; };
 		187AB3EA1D2608CA00C90F31 /* ZRStoreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStoreViewCell.h; sourceTree = "<group>"; };
@@ -226,7 +227,6 @@
 		18D3D2231D278ABB003D5AA2 /* ZRBookTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBookTip.m; sourceTree = "<group>"; };
 		18D3D2291D27A08A003D5AA2 /* ZRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRLoginView.h; sourceTree = "<group>"; };
 		18D3D22A1D27A08A003D5AA2 /* ZRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRLoginView.m; sourceTree = "<group>"; };
-		18D3D22B1D27A08A003D5AA2 /* ZRLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRLoginView.xib; sourceTree = "<group>"; };
 		18D3D22E1D27A5E3003D5AA2 /* ZRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRUser.h; sourceTree = "<group>"; };
 		18D3D22F1D27A5E3003D5AA2 /* ZRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRUser.m; sourceTree = "<group>"; };
 		18D3D2311D27EAC5003D5AA2 /* ZRGoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGoodInfo.h; sourceTree = "<group>"; };
@@ -554,7 +554,7 @@
 			children = (
 				18D3D2291D27A08A003D5AA2 /* ZRLoginView.h */,
 				18D3D22A1D27A08A003D5AA2 /* ZRLoginView.m */,
-				18D3D22B1D27A08A003D5AA2 /* ZRLoginView.xib */,
+				186778B11D2BD945006476F3 /* ZRLoginView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -912,7 +912,7 @@
 				18D612D21D1D1BF0008E94D0 /* LaunchScreen.storyboard in Resources */,
 				18C6E2001D289C6C005D3FFE /* ZRPayViewCell.xib in Resources */,
 				1827BEAB1D23A3ED00B1440B /* ZRBuyBookViewCell.xib in Resources */,
-				18D3D22D1D27A08A003D5AA2 /* ZRLoginView.xib in Resources */,
+				186778B21D2BD945006476F3 /* ZRLoginView.xib in Resources */,
 				1827BEB01D23A42A00B1440B /* ZRBookIntroViewCell.xib in Resources */,
 				1837253A1D2B9F9F00030FA5 /* ZRAddressViewCell.xib in Resources */,
 				18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */,

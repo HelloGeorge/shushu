@@ -21,6 +21,7 @@
 @property (nonatomic,weak) UIPageControl *pageControl;
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,weak) UIScrollView *scrollView;
+@property (nonatomic,weak) UIRefreshControl *refreshCon;
 
 @property (nonatomic,strong) NSArray *arrayModel;
 
@@ -68,6 +69,22 @@
     self.tableView.separatorStyle = NO;
     
     //加载首页书籍信息
+//    [self loadBookInfo];
+    
+    //集成下拉刷新的控件
+    [self refreshDownBook];
+}
+
+//集成下拉刷新的控件
+- (void)refreshDownBook{
+    //创建一个下拉刷新的控件
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:refresh];
+    //添加监听器
+    [refresh addTarget:self action:@selector(loadBookInfo) forControlEvents:UIControlEventValueChanged];
+    self.refreshCon = refresh;
+    
+    [refresh beginRefreshing];
     [self loadBookInfo];
 }
 
@@ -89,6 +106,9 @@
         self.arrayModel = array;
         //请求完数据后再刷新一次界面
         [self.tableView reloadData];
+        
+        //结束刷新
+        [self.refreshCon endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"请求失败");
         //请求失败之后来到这里

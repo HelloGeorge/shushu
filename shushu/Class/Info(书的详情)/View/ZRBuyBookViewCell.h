@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 @class ZRBookAllInfo;
 @class ZRBookTip;
+@class ZRBuyBookViewCell;
+
+@protocol ZRBuyBookViewCellDelegate <NSObject>
+
+- (void)plusBuyBtnClick:(ZRBuyBookViewCell *)cell;
+
+@end
 
 @interface ZRBuyBookViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *priceLbl;
@@ -31,5 +38,8 @@
 @property (nonatomic,strong) ZRBookTip *model2;
 @property (nonatomic,assign) int bookId;
 + (instancetype)buyBookCell;
+
+@property (nonatomic,weak) id<ZRBuyBookViewCellDelegate> delegate;
+
 
 @end

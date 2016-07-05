@@ -15,6 +15,7 @@
 #import "AFNetworking.h"
 #import "ZRUser.h"
 #import "ZRUserTool.h"
+#import "ZRLoginView.h"
 
 @interface ZRBuyViewController ()<ZRBuyViewCellDelegate>
 //存放商品信息模型的可变数组
@@ -28,6 +29,9 @@
 //底部显示的view
 @property (nonatomic,weak) UIView *botView;
 
+@property (nonatomic,weak) UIRefreshControl *refreshCon;
+
+
 
 @end
 
@@ -37,26 +41,31 @@
 static float allPrice = 0;
 
 //懒加载
-- (NSArray *)arrayModel{
-    if (_arrayModel == nil) {
-        self.arrayModel = [[NSMutableArray alloc] init];
-    }
-    return _arrayModel;
-}
+//- (NSArray *)arrayModel{
+//    if (_arrayModel == nil) {
+//        self.arrayModel = [[NSMutableArray alloc] init];
+//    }
+//    return _arrayModel;
+//}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (allPrice != 0) {
         self.botView.hidden = NO;
     }
-    
+    ZRUser *user = [ZRUserTool user];
+    if (!user) {      //说明用户没有登录
+        ZRLoginView *view = [[ZRLoginView alloc] init];
+        [self presentViewController:view animated:YES completion:nil];
+        
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //请求数据
-    [self loadBuyBookInfo];
+//    [self loadBuyBookInfo];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(selectThing)];
     
@@ -66,6 +75,24 @@ static float allPrice = 0;
     
     //创建一个底部的显示总价格的view
     [self createBotView];
+    
+    //集成一个下拉刷新的控件
+    [self refreshDownBuy];
+}
+
+//集成一个下拉刷新的控件
+- (void)refreshDownBuy{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:refreshControl];
+    
+    //添加监听器
+    [refreshControl addTarget:self action:@selector(loadBuyBookInfo) forControlEvents:UIControlEventValueChanged];
+    
+    self.refreshCon = refreshControl;
+    
+    [self.refreshCon beginRefreshing];
+    
+    [self loadBuyBookInfo];
 }
 
 - (void)loadBuyBookInfo{
@@ -81,6 +108,7 @@ static float allPrice = 0;
     //3.发送请求
     [mgr POST:@"http://www.91shushu.com/app/product/getCartMsg" parameters:param success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         //请求成功来到这里
+        self.arrayModel = [NSMutableArray array];
         NSArray *array = responseObject[@"result"];
         for (NSDictionary *dic in array) {
             ZRGoods *model = [ZRGoods goodsWithDic:dic];
@@ -88,6 +116,8 @@ static float allPrice = 0;
         }
         [self.tableView reloadData];
 //        NSLog(@"%@",responseObject);
+        
+        [self.refreshCon endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //请求失败来到这里
         NSLog(@"请求失败");

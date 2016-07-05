@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *userPwd;
 - (IBAction)loginBtn:(id)sender;
+- (IBAction)loginOut:(id)sender;
+
+
 
 @end
 
@@ -54,4 +57,11 @@
          NSLog(@"请求失败");
     }];
 }
+
+- (IBAction)loginOut:(id)sender {
+    ZRTabbarController *vc = [[ZRTabbarController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+
 @end

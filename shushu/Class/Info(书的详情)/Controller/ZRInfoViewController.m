@@ -15,8 +15,9 @@
 #import "AFNetworking.h"
 #import "ZRBookAllInfo.h"
 #import "MJExtension.h"
+#import "ZRLoginView.h"
 
-@interface ZRInfoViewController ()
+@interface ZRInfoViewController ()<ZRBuyBookViewCellDelegate>
 
 @property (nonatomic,strong) ZRBookAllInfo *data1;
 @property (nonatomic,strong) ZRBookTip *data2;
@@ -31,6 +32,8 @@
     
     //加载书籍的详细信息
     [self loadBookAllInfo];
+    
+    
     
 }
 
@@ -79,6 +82,7 @@
         cell.model1 = self.data1;
         cell.model2 = self.data2;
         cell.bookId = self.model.productId;
+        cell.delegate = self;
         return cell;
     }else if(indexPath.section == 1){
         ZRBookIntroViewCell *cell = [ZRBookIntroViewCell bookIntroCell];
@@ -99,6 +103,28 @@
         return 140;
     }
 }
+
+#pragma mark - ZRBuyBookViewCellDelegate的代理方法
+- (void)plusBuyBtnClick:(ZRBuyBookViewCell *)cell{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请登录后再加入购物车" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //点击ok按钮后执行的方法
+        ZRLoginView *view = [[ZRLoginView alloc] init];
+        [self presentViewController:view animated:YES completion:nil];
+    }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+
+
+
+
+
 
 
 
