@@ -11,6 +11,7 @@
 #import "UIView+ZRExtension.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
+#import "ZRShowView.h"
 
 #define SCANVIEW_EdgeTop 100.0
 #define SCANVIEW_EdgeLeft 50.0
@@ -19,7 +20,7 @@
 #define VIEW_WIDTH [UIScreen mainScreen].bounds.size.width
 #define VIEW_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ZRUploadViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface ZRUploadViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate>
 - (IBAction)scanfBook:(id)sender;
 
 //输入输出的中间桥梁
@@ -30,6 +31,7 @@
 @property (nonatomic,weak) UIView *QrCodeline;
 @property (nonatomic,weak) NSTimer *_timer;
 
+@property (nonatomic,weak) UITextField *m_textfield;
 
 
 
@@ -45,6 +47,13 @@
     self.kind.dataSource = self;
     self.kind.delegate = self;
     self.kind.hidden = YES;
+    
+    self.bookName.delegate = self;
+    self.isbnLbl.delegate = self;
+    self.oriPrice.delegate = self;
+    self.nowPrice.delegate = self;
+    self.writerLbl.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -276,6 +285,20 @@
     [mgr POST:@"http://www.91shushu.com/product/upProduct" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //请求成功来到这里
         NSLog(@"请求成功");
+        ZRShowView *view = [ZRShowView showViewWithText:@"上传成功"];
+        [[UIApplication sharedApplication].keyWindow addSubview:view];
+        view.alpha = 0;
+        [UIView animateWithDuration:1.0 animations:^{
+            view.alpha = 1;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                    view.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [view removeFromSuperview];
+                }];
+            }
+        }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //请求失败来到这里
         NSLog(@"%@",error);
@@ -288,6 +311,10 @@
     //最好这样写，因为可能显示其他的控制器当前控制器的view就取消了，这时程序就会出错
     [sheet showInView:self.view.window];
 }
+
+- (IBAction)uoPhoto:(id)sender {
+}
+
 
 
 #pragma mark - UIActionSheet的代理方法
@@ -327,6 +354,11 @@
     
 }
 
+//点击屏幕空白view之后要弹回键盘
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.m_textfield resignFirstResponder];
+}
+
 #pragma mark - UIImagePickerControllerDelegate的代理方法
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     
@@ -336,9 +368,14 @@
     self.imgBook.image = info[UIImagePickerControllerOriginalImage];
 }
 
+#pragma mark - UITextFieldDelegate的代理方法
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.m_textfield = textField;
+}
 
-
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+    return (toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
 
 
 

@@ -33,4 +33,7 @@
 - (IBAction)upBook:(id)sender;
 - (IBAction)chooseImage:(id)sender;
 
+- (IBAction)uoPhoto:(id)sender;
+
+
 @end

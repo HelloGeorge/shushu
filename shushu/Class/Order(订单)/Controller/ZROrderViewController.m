@@ -16,6 +16,7 @@
 #import "ZRUserTool.h"
 #import "ZRUser.h"
 #import "ZRAddressViewCell.h"
+#import "ZRShowView.h"
 
 @interface ZROrderViewController ()
 
@@ -136,6 +137,20 @@
         
         self.tip = responseObject[@"tip"];
         [self.tableView reloadData];
+        ZRShowView *view = [ZRShowView showViewWithText:@"刷新成功"];
+        [[UIApplication sharedApplication].keyWindow addSubview:view];
+        view.alpha = 0;
+        [UIView animateWithDuration:1.0 animations:^{
+            view.alpha = 1;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                [UIView animateWithDuration:1.0 delay:1.09 options:UIViewAnimationOptionCurveLinear animations:^{
+                    view.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [view removeFromSuperview];
+                }];
+            }
+        }];
         [self bottomView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //请求失败来到这里

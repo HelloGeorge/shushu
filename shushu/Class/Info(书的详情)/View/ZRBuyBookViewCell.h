@@ -14,6 +14,7 @@
 @protocol ZRBuyBookViewCellDelegate <NSObject>
 
 - (void)plusBuyBtnClick:(ZRBuyBookViewCell *)cell;
+- (void)showView;
 
 @end
 

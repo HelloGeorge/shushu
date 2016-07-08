@@ -16,6 +16,7 @@
 #import "ZRUser.h"
 #import "ZRUserTool.h"
 #import "ZRLoginView.h"
+#import "ZRShowView.h"
 
 @interface ZRBuyViewController ()<ZRBuyViewCellDelegate>
 //存放商品信息模型的可变数组
@@ -118,6 +119,21 @@ static float allPrice = 0;
 //        NSLog(@"%@",responseObject);
         
         [self.refreshCon endRefreshing];
+        //提示
+        ZRShowView *view = [ZRShowView showViewWithText:@"刷新成功"];
+        [[UIApplication sharedApplication].keyWindow addSubview:view];
+        view.alpha = 0;
+        [UIView animateWithDuration:1.0 animations:^{
+            view.alpha = 1;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                    view.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [view removeFromSuperview];
+                }];
+            }
+        }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //请求失败来到这里
         NSLog(@"请求失败");

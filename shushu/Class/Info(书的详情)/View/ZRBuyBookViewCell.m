@@ -15,6 +15,7 @@
 #import "ZRUserTool.h"
 #import "ZRUser.h"
 
+
 @interface ZRBuyBookViewCell ()
 
 
@@ -104,6 +105,10 @@
         [mgr POST:@"http://www.91shushu.com/app/product/joinCart" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
             //请求成功返回这里
             NSLog(@"成功加入购物车");
+            if ([self.delegate respondsToSelector:@selector(showView)]) {
+                [self.delegate showView];
+            }
+            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             //请求失败返回这里
             NSLog(@"请求失败");

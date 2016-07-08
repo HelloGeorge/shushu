@@ -15,6 +15,7 @@
 #import "AFNetworking.h"
 #import "ZRBookInfo.h"
 #import "MJExtension.h"
+#import "ZRShowView.h"
 #define ZRBanCount 3
 
 @interface ZRHomeViewController ()<UIScrollViewDelegate>
@@ -109,6 +110,21 @@
         
         //结束刷新
         [self.refreshCon endRefreshing];
+        //提示
+        ZRShowView *view = [ZRShowView showViewWithText:@"刷新成功"];
+        view.alpha = 0;
+        [[UIApplication sharedApplication].keyWindow addSubview:view];
+        [UIView animateWithDuration:1.0 animations:^{
+            view.alpha = 1;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                    view.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [view removeFromSuperview];
+                }];
+            }
+        }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"请求失败");
         //请求失败之后来到这里

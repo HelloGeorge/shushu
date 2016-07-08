@@ -40,7 +40,7 @@
         
         //初始化编辑删除的按钮控件
         UIButton *btn2 = [[UIButton alloc] init];
-        btn2.frame = CGRectMake(300, 5, 50, 30);
+        btn2.frame = CGRectMake(350, 5, 50, 30);
         self.editBtn = btn2;
         [btn2 setTitle:@"编辑" forState:UIControlStateNormal];
         [btn2 setTitle:@"完成" forState:UIControlStateSelected];

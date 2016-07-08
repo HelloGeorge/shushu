@@ -91,6 +91,7 @@
 		18D613251D1D5F0F008E94D0 /* ZRBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613241D1D5F0F008E94D0 /* ZRBuyViewController.m */; };
 		18D613281D1D5F3A008E94D0 /* ZRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */; };
 		18D6132B1D1D634C008E94D0 /* ZRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */; };
+		18DF304B1D2F8291000B564C /* ZRShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF304A1D2F8291000B564C /* ZRShowView.m */; };
 		18F1586B1D1F673A00DC6C43 /* ZRBuyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */; };
 		18F158701D1FE08A00DC6C43 /* ZRBuyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */; };
 		18F158731D1FE0FC00DC6C43 /* ZRBuyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F158721D1FE0FC00DC6C43 /* ZRBuyHeaderView.m */; };
@@ -254,6 +255,8 @@
 		18D613271D1D5F3A008E94D0 /* ZRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRProfileViewController.m; sourceTree = "<group>"; };
 		18D613291D1D634C008E94D0 /* ZRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSearchBar.h; sourceTree = "<group>"; };
 		18D6132A1D1D634C008E94D0 /* ZRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSearchBar.m; sourceTree = "<group>"; };
+		18DF30491D2F8291000B564C /* ZRShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRShowView.h; sourceTree = "<group>"; };
+		18DF304A1D2F8291000B564C /* ZRShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRShowView.m; sourceTree = "<group>"; };
 		18F158681D1F673A00DC6C43 /* ZRBuyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBuyViewCell.h; sourceTree = "<group>"; };
 		18F158691D1F673A00DC6C43 /* ZRBuyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBuyViewCell.m; sourceTree = "<group>"; };
 		18F1586F1D1FE08A00DC6C43 /* ZRBuyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBuyViewCell.xib; sourceTree = "<group>"; };
@@ -696,6 +699,8 @@
 				182857E61D1E255A0050DFCA /* ZRTableViewCell.h */,
 				182857E71D1E255A0050DFCA /* ZRTableViewCell.m */,
 				182857E81D1E255A0050DFCA /* ZRTableViewCell.xib */,
+				18DF30491D2F8291000B564C /* ZRShowView.h */,
+				18DF304A1D2F8291000B564C /* ZRShowView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -980,6 +985,7 @@
 				187AB3ED1D2608CA00C90F31 /* ZRStoreViewCell.m in Sources */,
 				18D12D571D222A3400B77B86 /* ZRGoods.m in Sources */,
 				18C8CC051D26583F007F419E /* UIImageView+WebCache.m in Sources */,
+				18DF304B1D2F8291000B564C /* ZRShowView.m in Sources */,
 				18C8CBCD1D265090007F419E /* AFHTTPRequestOperationManager.m in Sources */,
 				18C8CC061D26583F007F419E /* UIView+WebCacheOperation.m in Sources */,
 				187AB3F81D2628E400C90F31 /* ZRUploadViewController.m in Sources */,

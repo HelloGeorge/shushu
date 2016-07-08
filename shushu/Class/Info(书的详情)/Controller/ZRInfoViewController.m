@@ -16,6 +16,7 @@
 #import "ZRBookAllInfo.h"
 #import "MJExtension.h"
 #import "ZRLoginView.h"
+#import "ZRShowView.h"
 
 @interface ZRInfoViewController ()<ZRBuyBookViewCellDelegate>
 
@@ -120,7 +121,23 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-
+//提示
+- (void)showView{
+    ZRShowView *view = [ZRShowView showViewWithText:@"成功加入购物车"];
+    [[UIApplication sharedApplication].keyWindow addSubview:view];
+    view.alpha = 0;
+    [UIView animateWithDuration:1.0 animations:^{
+        view.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                view.alpha = 0;
+            } completion:^(BOOL finished) {
+                [view removeFromSuperview];
+            }];
+        }
+    }];
+}
 
 
 

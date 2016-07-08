@@ -8,14 +8,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZRPayViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWg-iC-a4c">
-                        <rect key="frame" x="124" y="14" width="94" height="23"/>
+                        <rect key="frame" x="146" y="14" width="94" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="卖家配送" image="new_feature_share_false">
                             <color key="titleColor" red="0.0060741164919999998" green="0.00070246203759999999" blue="0.0011515592290000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,7 +26,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-jf-vrw">
-                        <rect key="frame" x="124" y="38" width="94" height="23"/>
+                        <rect key="frame" x="146" y="38" width="94" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="自行取货" image="new_feature_share_false">
                             <color key="titleColor" red="0.0060741164919999998" green="0.00070246203759999999" blue="0.0011515592290000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,7 +37,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTn-8m-nqb">
-                        <rect key="frame" x="231" y="16" width="130" height="21"/>
+                        <rect key="frame" x="248" y="16" width="130" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="1" green="0.11564843029999999" blue="0.18958464659999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-qG-KNN">
-                        <rect key="frame" x="124" y="66" width="94" height="30"/>
+                        <rect key="frame" x="146" y="66" width="94" height="30"/>
                         <state key="normal" title="支付宝">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
