@@ -36,6 +36,7 @@
     [encoder encodeObject:[NSString stringWithFormat:@"%d",self.ID] forKey:@"ID"];
     [encoder encodeObject:self.major forKey:@"major"];
     [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeObject:self.school forKey:@"school"];
     [encoder encodeObject:[NSString stringWithFormat:@"%d",self.storeID] forKey:@"storeID"];
     [encoder encodeObject:[NSString stringWithFormat:@"%d",self.studentID] forKey:@"studentID"];
     [encoder encodeObject:[NSString stringWithFormat:@"%d",self.roleId] forKey:@"roleId"];

@@ -51,7 +51,7 @@
         
         ZRTabbarController *vc = [[ZRTabbarController alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
-//        NSLog(@"%@",responseObject);
+        NSLog(@"%@",responseObject);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //请求失败来到这里

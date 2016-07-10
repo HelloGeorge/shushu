@@ -14,6 +14,7 @@
 #import "ZRUser.h"
 #import "ZRLoginView.h"
 #import "ZRTabbarController.h"
+#import "ZRUserInfoController.h"
 
 @interface ZRProfileViewController ()<ZRPersonalTableViewCellDelegate>
 
@@ -148,6 +149,13 @@
         return 0;
     }else{
         return 60;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        ZRUserInfoController *vc = [[ZRUserInfoController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
